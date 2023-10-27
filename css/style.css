@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+
+
+/* Estilos para o header */
+header {
+  padding: 10px;
+  background: linear-gradient(to right, #ffff 20%, #b7131f 50%);
+  width: 100%;
+}
+
+.logo-e-nome {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+}
+
+/* Estilos para o login e cadastro no NAV*/
+.login-cadastro-container {
+  margin-right: 30px;
+}
+
+.login-cadastro-container .containe {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+}
+
+.login-cadastro-container .nav {
+  font-size: 25px;
+  margin-left: 20px;
+
+}
+
+.login-cadastro-container .guia {
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+
+
+
+textarea:focus,
+.input_login:focus {
+  outline: none;
+}
+
+.a_login {
+  font-size: 16px;
+}
+
+.a_login:hover {
+  color: #08558B;
+}
+
+/* CSS DE Login */
+#login-container {
+  background-color: #dcdcdc;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  padding: 20px 30px;
+  margin-top: 5%;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+
+.form_login {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.label_login,
+.input_login {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.label_login {
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.input_login {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.input_login:focus {
+  border-bottom: 2px solid #08558B;
+}
+
+#forgot-pass {
+  display: block;
+  text-align: right;
+}
+
+.input_login[type="submit"] {
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #08558B;
+  font-weight: bold;
+}
+
+.input_login[type="submit"]:hover {
+  background-color: #1B223C;
+  transition: .5s;
+}
+
+/* redes sociais */
+#social-container {
+  margin-bottom: 20px;
+}
+
+#social-container p {
+  margin-bottom: 20px;
+}
+
+#social-container i {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  line-height: 40px;
+  margin: 0 5px;
+  color: #FFF;
+}
+
+
+
+/* registrar */
+#register-container .p_login {
+  margin-bottom: 10px;
+}
+
+
+
+
+/*RODAPÉ, FOOTER*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+#footer_copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  background-color: black;
+  padding: 1.5rem;
+  font-weight: 100;
+  color: #ffff;
+}
+
+:root {
+  --color-neutral-0: #0e0c0c;
+  --color-neutral-10: #171717;
+  --color-neutral-30: #a8a29e;
+  --color-neutral-40: #f5f5f5;
+
+}
+
+footer {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+footer_tudo {
+  width: 100%;
+  color: var(--color-neutral-40);
+}
+
+.footer-link {
+  text-decoration: none;
+}
+
+#footer_content {
+  background: linear-gradient(to right, #b7131f 20%, #ffff 50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+  margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  color: var(--color-neutral-40);
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+  font-size: 1.25rem;
+}
+
+#footer_social_media .footer-link:hover {
+  opacity: 0.8;
+}
+
+#instagram {
+  background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+  background-color: #4267b3;
+}
+
+#wpp {
+  background-color: #25d366;
+}
+
+#twitter {
+  background-color: #00acee;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-list .footer-link {
+  color: var(--color-neutral-30);
+  transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+  color: #7f37c9;
+}
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#footer_subscribe p {
+  color: var(--color-neutral-30);
+}
+
+#input_group {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-neutral-0);
+  border-radius: 4px;
+}
+
+#input_group .input_email {
+
+  padding: 0.75rem;
+  width: 100%;
+}
+
+#input_group button {
+  background-color: #b7131f;
+  border: none;
+  color: var(--color-neutral-40);
+  padding: 0px 1.25rem;
+  font-size: 1.125rem;
+  height: 100%;
+  border-radius: 0px 4px 4px 0px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#input_group button:hover {
+  opacity: 0.8;
+}
+
+#footer_copyright {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-neutral-0);
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+}
+
+.mensagem-validacao {
+  color: red; /* Cor do texto da mensagem */
+  font-size: 14px; /* Tamanho da fonte da mensagem */
+  margin-top: 5px; /* Espaço entre os campos e as mensagens */
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: none;
+  margin-top: 5px;
+}
+
+/*  css dos titulos e seus paragrafos  */ 
+
+.titulos{
+  margin: 30px;
+  color:#183269;
+}
+
+.texto{
+   margin: 30px;
+   font-size: 120%;
+}
+
+#msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 80px;
+  border-radius: 4px;
+  display: none;
+}
+#msgSuccess{
+  text-align: center;
+  color: #00bb00;
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}

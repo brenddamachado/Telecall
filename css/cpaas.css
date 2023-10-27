@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+header {
+  min-height: 150px;
+  padding-top: 40px;
+  width: 100%;
+  text-align:center;
+  background-color: #FAFAFA;
+} 
+
+
+.Titulo {
+  width: 10px; /* Largura desejada */
+  height: 10px; /* Altura desejada */
+  margin: 15px;
+  font-size: 44px;
+  color: #87CEEB; 
+}
+
+
+ 
+
+nav {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+}
+/* Estilos para o login e cadastro no HEADER*/
+.login-cadastro-container {
+  margin-right: 30px;
+}
+
+.login-cadastro-container .containe {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+}
+
+.login-cadastro-container .nav {
+  font-size: 25px;
+  margin-left: 20px;
+
+}
+
+.login-cadastro-container a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.container{
+  background-color: white;
+}
+
+
+
+#titulos_cpaas {
+  color: #87CEEB;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 1%;
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+
+
+#paragrafos_cpaas {
+  color: #757575;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 25px;
+  margin: 15px;
+}
+
+.imagens {
+  text-align: center;
+  width: auto;
+  height: auto;
+
+}
+
+body{
+  background-color:  #FAFAFA;
+}

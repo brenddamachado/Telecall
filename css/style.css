@@ -364,3 +364,21 @@ footer_tudo {
   border-radius: 4px;
   display: none;
 }
+
+.password-container {
+  position: relative;
+}
+
+.password-container i {
+  position: absolute;
+  right: 10px; /* Ajuste o valor conforme necessário para o posicionamento correto */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Estilize o ícone "olho" de acordo com sua necessidade */
+.fa-eye {
+  color: #333; /* Cor do ícone */
+  font-size: 20px; /* Tamanho do ícone */
+}

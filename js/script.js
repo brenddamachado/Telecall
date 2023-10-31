@@ -1,6 +1,6 @@
 
-let btn = document.querySelector('.fa-eye');
-let btn2 = document.querySelector('.fa-eye');
+let btn = document.querySelector('#verSenha');
+let btn2 = document.querySelector('#verConfirme');
 
 let labelNome = document.querySelector('#labelNome');
 let nome = document.querySelector('#nome');

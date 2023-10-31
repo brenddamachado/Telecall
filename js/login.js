@@ -30,3 +30,26 @@ function validarFormulario() {
   }
 
 document.getElementById('passwor')
+let btn = document.querySelector('#verSenha');
+let senha = document.querySelector('#password')
+btn.addEventListener('click', () => {
+  let inputSenha = document.querySelector('#password')
+  if (inputSenha.getAttribute('type') == 'password') {
+    inputSenha.setAttribute('type', 'text')
+  } else {
+    inputSenha.setAttribute('type', 'password')
+  }
+})
+senha.addEventListener('input', () => {
+  senha.value = senha.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
+
+  if (senha.value.length < 8) {
+      labelSenha.setAttribute('style', 'color: red');
+      labelSenha.innerHTML = 'Senha *Insira no mínimo 8 caracteres';
+      validesenha = false;
+  } else {
+      labelSenha.setAttribute('style', 'color: green');
+      labelSenha.innerHTML = 'Senha';
+      validesenha = true;
+  }
+});

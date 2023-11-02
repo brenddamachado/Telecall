@@ -40,18 +40,18 @@
   </header>
 
   <div id="login-container">
-    <form class="form_login" id="formulario" onsubmit="return validarFormulario();" action="">
+    <form class="form_login" action="#" method="post">
       
-      <label class="label_login" for="email">E-mail</label>
-      <input class="input_login" type="email" name="email" id="email" placeholder="Digite seu e-email" autocomplete="off" required>
-     <span id="erroEmail" class="mensagem-erro"></span>
 
-      <label class="label_login" for="password">Senha</label>
+      <label class="label_login" id="labelLogin" for="login" class="form">Login:</label>
+      <input class="input_login" type='text' id='login' name='login' placeholder="Digite um login" maxlength="6">
+
+      <label class="label_login" id="labelSenha" for="senha" class="form"> Senha:</label>
       <div class="password-container">
-     <input class="input_login" type="password" name="password" id="password" placeholder="Digite sua senha" maxlength="8" required > 
-     <i id="verSenha" class="fa-regular fa-eye"></i>
+        <input class="input_login" type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="8"
+          autocomplete="new-password">
+        <i id="verSenha" class="fa-regular fa-eye"></i>
       </div>
-    <span id="erroSenha" class="mensagem-erro"></span>
 
 
       

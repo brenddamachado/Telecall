@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Telecall</title>
-  
+
   <!-- NOSSO CSS -->
   <link href="../css/style.css" rel="stylesheet" type="text/css">
   <!-- NOSSO CSS -->
@@ -59,7 +59,7 @@
   <div id="login-container">
     <form class="form_login" action="#" method="post">
       <label class="label_login" for="nome" id="labelNome"> Nome:</label>
-      <input class="input_login" type="text" id="nome" name="nome" maxlength="60">
+      <input class="input_login" type="text" id="nome" name="nome" maxlength="60" autofocus>
 
       <label for="nasc" class="label_login"> Data de nascimento: </label>
       <input class="input_login" type="date" id="nasc" name="nasc">
@@ -72,9 +72,10 @@
       <input type="radio" id="outro" name="genero" value="outro">
       <label for="outro">Outro</label>
 
-      <label class="label_login" for="name" id="labelMae">Nome da mãe:</label>
-      <input type="text" id="Nomematerno" name="mae" class="input_login" placeholder="Digite o nome da sua mãe" maxlength="60">
-      
+      <label class="label_login" for="name" id="labelMae">Nome Materno:</label>
+      <input type="text" id="Nomematerno" name="mae" class="input_login" placeholder="Digite o nome da sua mãe"
+        maxlength="60">
+
       <label for="cpf" id='labelCpf' class="label_login">CPF:</label>
       <input class="input_login" type="text" id="cpf" name="cpf" maxlength="11" placeholder="Digite seu cpf" />
 
@@ -105,27 +106,32 @@
       <input class="input_login" type="text" id='ende' name="complemento" placeholder="Digite o complemento">
 
       <label class="label_login" id="labelLogin" for="login" class="form">Login:</label>
-      <input class="input_login" type='text' id='login' name='login' placeholder="Digite um login"maxlength="6">
+      <input class="input_login" type='text' id='login' name='login' placeholder="Digite um login" maxlength="6">
 
       <label class="label_login" id="labelEmail" for="login" class="form"> E-mail:</label>
-      <input class="input_login" type="email" id="email" name="email" placeholder="Digite um e-mail" >
+      <input class="input_login" type="email" id="email" name="email" placeholder="Digite um e-mail">
 
 
       <label class="label_login" id="labelSenha" for="senha" class="form"> Senha:</label>
       <div class="password-container">
-      <input class="input_login" type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="8" autocomplete="new-password">
-      <i id="verSenha" class="fa-regular fa-eye"></i>
-    </div>
+        <input class="input_login" type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="8"
+          autocomplete="new-password">
+        <i id="verSenha" class="fa-regular fa-eye"></i>
+      </div>
       <label class="label_login" id="labelConfirmacao" for="senha2" class="form"> Confirmação de Senha:</label>
       <div class="password-container">
-        <input class="input_login" type="password" id="senha2" name="senha2" placeholder="Digite sua senha" maxlength="8" autocomplete="new-password">
+        <input class="input_login" type="password" id="senha2" name="senha2" placeholder="Digite sua senha"
+          maxlength="8" autocomplete="new-password">
         <i id="verConfirme" class="fa-regular fa-eye"></i>
       </div>
-      
+
+      <div id="mensagem"></div>
 
 
 
-<input type="submit"  onclick='cadastrar()' class="input_login">
+      <input type="submit" onclick='cadastrar()' class="input_login
+       
+
 
     </form>
 
@@ -215,8 +221,8 @@
       </div>
     </div>
   </footer>
- 
-<script src="../js/script.js"></script>
+
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

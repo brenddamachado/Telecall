@@ -382,3 +382,18 @@ footer_tudo {
   color: #333; /* Cor do ícone */
   font-size: 20px; /* Tamanho do ícone */
 }
+
+.container_principal {
+  display: flex; /* Usar flexbox para posicionar os elementos lado a lado */
+  align-items: center; /* Alinhar verticalmente os elementos */
+  margin-top: 30px;
+}
+
+.ft {
+  float: left; /* Flutuar a imagem para a esquerda */
+
+}
+
+.txt {
+  overflow: hidden; /* Limpar as flutuações e garantir que o texto não se sobreponha à imagem */
+}

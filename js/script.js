@@ -8,7 +8,7 @@ let validenome = false;
 
 let labelSenha = document.querySelector('#labelSenha');
 let senha = document.querySelector('#senha');
-let letvalidesenha = false;
+let validesenha = false;
 
 let labelConfirmacao = document.querySelector('#labelConfirmacao');
 let senha2 = document.querySelector('#senha2');
@@ -26,7 +26,7 @@ let labelLogin = document.querySelector('#labelLogin');
 let validelogin = false;
 
 let labelCpf = document.querySelector('#labelCpf');
-let validecpf=false;
+let validecpf = false;
 
 const cepInput = $("#cep");
 const labelCep = $("#labelCep");
@@ -64,46 +64,46 @@ nome.addEventListener('input', () => {
 
 
 senha.addEventListener('input', () => {
-    senha.value = senha.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
+  senha.value = senha.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
 
-    if (senha.value.length < 8) {
-        labelSenha.setAttribute('style', 'color: red');
-        labelSenha.innerHTML = 'Senha *Insira no mínimo 8 caracteres';
-        validesenha = false;
-    } else {
-        labelSenha.setAttribute('style', 'color: green');
-        labelSenha.innerHTML = 'Senha';
-        validesenha = true;
-    }
+  if (senha.value.length < 8) {
+    labelSenha.setAttribute('style', 'color: red');
+    labelSenha.innerHTML = 'Senha *Insira no mínimo 8 caracteres';
+    validesenha = false;
+  } else {
+    labelSenha.setAttribute('style', 'color: green');
+    labelSenha.innerHTML = 'Senha';
+    validesenha = true;
+  }
 });
 
 senha2.addEventListener('input', () => {
-    senha2.value = senha2.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
+  senha2.value = senha2.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
 
-    if (senha.value !== senha2.value) {
-        labelConfirmacao.setAttribute('style', 'color: red');
-        labelConfirmacao.innerHTML = 'Confirmação de Senha *As senhas não conferem';
-        validesenha2 = false;
-    } else {
-        labelConfirmacao.setAttribute('style', 'color: green');
-        labelConfirmacao.innerHTML = 'Confirmação de Senha';
-        validesenha2 = true;
-    }
+  if (senha.value !== senha2.value) {
+    labelConfirmacao.setAttribute('style', 'color: red');
+    labelConfirmacao.innerHTML = 'Confirmação de Senha *As senhas não conferem';
+    validesenha2 = false;
+  } else {
+    labelConfirmacao.setAttribute('style', 'color: green');
+    labelConfirmacao.innerHTML = 'Confirmação de Senha';
+    validesenha2 = true;
+  }
 });
 
 
 mae.addEventListener('input', () => {
-    mae.value = mae.value.replace(/\d/g, ''); // Remove números
-    nome.value = nome.value.replace(/[^a-zA-Z\s]/g, ''); // Remove caracteres não alfabéticos
-    if (mae.value.length >= 15 && nome.value.length < 60) {
-        labelMae.setAttribute('style', 'color: green');
-        labelMae.innerHTML = 'Nome da mãe';
-        validemae = true;
-    } else {
-        labelMae.setAttribute('style', 'color: red');
-        labelMae.innerHTML = 'Nome da mãe *insira no mínimo 15 caracteres';
-        validemae = false;
-    }
+  mae.value = mae.value.replace(/\d/g, ''); // Remove números
+  nome.value = nome.value.replace(/[^a-zA-Z\s]/g, ''); // Remove caracteres não alfabéticos
+  if (mae.value.length >= 15 && nome.value.length < 60) {
+    labelMae.setAttribute('style', 'color: green');
+    labelMae.innerHTML = 'Nome da mãe';
+    validemae = true;
+  } else {
+    labelMae.setAttribute('style', 'color: red');
+    labelMae.innerHTML = 'Nome da mãe *insira no mínimo 15 caracteres';
+    validemae = false;
+  }
 });
 
 
@@ -144,25 +144,25 @@ function validarCPF(cpf) {
 }
 
 cpf.addEventListener('input', () => {
-    // Remove todos os caracteres não numéricos
-    cpf.value = cpf.value.replace(/\D/g, '');
+  // Remove todos os caracteres não numéricos
+  cpf.value = cpf.value.replace(/\D/g, '');
 
-    const isCPFValid = validarCPF(cpf.value);
+  const isCPFValid = validarCPF(cpf.value);
 
-    if (isCPFValid) {
-        labelCpf.setAttribute('style', 'color: green');
-        labelCpf.innerHTML = 'CPF válido';
-        cpf.value = isCPFValid; // Define o valor da entrada como o CPF formatado
-        validecpf = true;
-    } else {
-        labelCpf.setAttribute('style', 'color: red');
-        labelCpf.innerHTML = 'CPF inválido';
-        validecpf = false;
-    }
+  if (isCPFValid) {
+    labelCpf.setAttribute('style', 'color: green');
+    labelCpf.innerHTML = 'CPF válido';
+    cpf.value = isCPFValid; // Define o valor da entrada como o CPF formatado
+    validecpf = true;
+  } else {
+    labelCpf.setAttribute('style', 'color: red');
+    labelCpf.innerHTML = 'CPF inválido';
+    validecpf = false;
+  }
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
   //Telefone
   $("#tel").mask("(99) 9999-9999");
 
@@ -173,7 +173,7 @@ $(document).ready(function () {
 
 
 
-emailInput.addEventListener('input', function () {
+emailInput.addEventListener('input', function() {
   const email = emailInput.value;
   validarEmail(email);
 });
@@ -193,11 +193,6 @@ function validarEmail(email) {
 
   }
 }
-
-
-
-
-
 
 cepInput.on("input", function () {
   let cep = cepInput.val().replace(/\D/g, "").slice(0, 8);
@@ -219,7 +214,6 @@ cepInput.on("input", function () {
   }
 });
 
-
 function validarCep(cep) {
   var regex = /^[0-9]{8}$/;
 
@@ -227,12 +221,10 @@ function validarCep(cep) {
     labelCep.css("color", "green");
     labelCep.html('Cep válido');
     validecep = true;
-
   } else {
     labelCep.css("color", "red");
     labelCep.html('Cep inválido');
     validecep = false;
-
   }
 
   const url = `https://viacep.com.br/ws/${cep}/json/`;
@@ -249,12 +241,14 @@ function validarCep(cep) {
       .then((data) => {
         if (data.erro) {
           labelCep.css("color", "red");
-          throw new Error('CEP não encontrado.');
+          labelCep.html('CEP não encontrado');
+          validecep = false;
         } else {
           labelCep.css("color", "green");
           labelRua.css("color", "green");
           labelCidade.css("color", "green");
           labelBairro.css("color", "green");
+          validecep = true;
         }
 
         cidadeInput.val(data.localidade);
@@ -263,16 +257,31 @@ function validarCep(cep) {
       })
       .catch((error) => {
         console.error(error);
+        validecep = false;
       });
   }
 }
 
 
+
+
 function cadastrar() {
-  if (validenome && validesenha && validesenha2 && validecep && validecpf && valideemail && validemae) {
-alert("Vamos analisar seus dados e logo entraremos em contato com você.");
+  if (validenome && validesenha && validesenha2 && validecep && validecpf && valideemail && validemae && validelogin) {
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+    listaUser.push({
+      nomeCard: nome.value,
+        senhaCard: senha.value,
+        emailCard: email.value,
+      loginCard: login.value
+    })
+
+    localStrong.setItem('listaUser', JSON.stringify(listaUser));
+    document.getElementById('mensagem').innerHTML = 'Carregando...';
+    setTimeout(function () {
+      window.location.href = 'https://projetotelecall.rianefm.repl.co/html/Login.html'; // Redirecionar após algum atraso (exemplo de 2 segundos)
+    }, 2000); // Atraso de 2 segundos (2000 milissegundos)
   } else {
-  alert('Dados incorretos, preencha corretamente.');
+    document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
   }
 }
 
@@ -292,5 +301,30 @@ btn2.addEventListener('click', () => {
     inputSenha.setAttribute('type', 'text')
   } else {
     inputSenha.setAttribute('type', 'password')
+  }
+});
+
+
+
+
+login.addEventListener('input', function () {
+  let inputValue = login.value;
+
+  // Remova espaços em branco do início e do final do valor
+  inputValue = inputValue.trim();
+
+  // Remova todos os números do valor
+  inputValue = inputValue.replace(/\d/g, '');
+
+  login.value = inputValue; // Define o valor do campo sem os números
+
+  if (inputValue.length === 6) {
+    labelLogin.textContent = "Válido";
+    labelLogin.style.color = "green";
+    validelogin = true;
+  } else {
+    labelLogin.textContent = "Incorreto. Digite exatamente 8 letras.";
+    labelLogin.style.color = "red";
+    validelogin = false;
   }
 });

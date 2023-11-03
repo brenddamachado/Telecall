@@ -267,20 +267,21 @@ function validarCep(cep) {
 
 function cadastrar() {
   if (validenome && validesenha && validesenha2 && validecep && validecpf && valideemail && validemae && validelogin) {
-    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-    listaUser.push({
-      nomeCard: nome.value,
-        senhaCard: senha.value,
-        emailCard: email.value,
-      loginCard: login.value
-    })
+let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
 
-    localStrong.setItem('listaUser', JSON.stringify(listaUser));
-    document.getElementById('mensagem').innerHTML = 'Carregando...';
-    setTimeout(function () {
-      window.location.href = 'https://projetotelecall.rianefm.repl.co/html/Login.html'; // Redirecionar após algum atraso (exemplo de 2 segundos)
-    }, 2000); // Atraso de 2 segundos (2000 milissegundos)
-  } else {
+listaUser.push(
+  {
+    nome: nome.value,
+    login: login.value,
+    email: emailInput.value,
+    senha: senha.value
+  }
+)
+localStorage.setItem('listaUser', JSON.stringify(listaUser))
+
+document.getElementById('mensagem').innerHTML = 'Carregando...';
+window.location.href = 'https://www.google.com';
+} else {
     document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
   }
 }

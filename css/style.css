@@ -397,3 +397,16 @@ footer_tudo {
 .txt {
   overflow: hidden; /* Limpar as flutuações e garantir que o texto não se sobreponha à imagem */
 }
+.btn_cadastrar{
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #FFF;
+  background-color: #08558B;
+  font-weight: bold;
+  width: 100%;
+}

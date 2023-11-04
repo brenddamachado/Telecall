@@ -266,23 +266,27 @@ function validarCep(cep) {
 
 
 function cadastrar() {
+  // Validações dos campos
+
   if (validenome && validesenha && validesenha2 && validecep && validecpf && valideemail && validemae && validelogin) {
-let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+      let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
-listaUser.push(
-  {
-    nome: nome.value,
-    login: login.value,
-    email: emailInput.value,
-    senha: senha.value
-  }
-)
-localStorage.setItem('listaUser', JSON.stringify(listaUser))
+      listaUser.push({
+          nome: nome.value,
+          login: login.value,
+          email: emailInput.value,
+          senha: senha.value
+      });
 
-document.getElementById('mensagem').innerHTML = 'Carregando...';
-window.location.href = 'https://www.google.com';
-} else {
-    document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
+      localStorage.setItem('listaUser', JSON.stringify(listaUser));
+
+      // Redirecionar para outra página após o cadastro bem-sucedido
+      window.location.href = "https://www.google.com"; // Substitua com a URL desejada
+
+      return false; // Impede o envio do formulário, já que a página será redirecionada
+  } else {
+      document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
+      return false; // Impede o envio do formulário em caso de erro
   }
 }
 

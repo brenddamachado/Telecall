@@ -281,7 +281,7 @@ function cadastrar() {
       localStorage.setItem('listaUser', JSON.stringify(listaUser));
 
       // Redirecionar para outra página após o cadastro bem-sucedido
-      window.open("https://www.google.com", "_blank"); // Substitua com a URL desejada
+      window.open("http://127.0.0.1:5501/html/Login.html", "_blank"); // Substitua com a URL desejada
 
       return false; // Impede o envio do formulário, já que a página será redirecionada
   } else {

@@ -279,9 +279,12 @@ function cadastrar() {
       });
 
       localStorage.setItem('listaUser', JSON.stringify(listaUser));
+      setTimeout(()=>{
+        window.open("http://127.0.0.1:5501/html/Login.html", "_blank");
+    }, 3000)
 
-      // Redirecionar para outra página após o cadastro bem-sucedido
-      window.open("http://127.0.0.1:5501/html/Login.html", "_blank"); // Substitua com a URL desejada
+    document.getElementById('mensagem').innerHTML = 'Cadastro realizado com sucesso!';
+
 
       return false; // Impede o envio do formulário, já que a página será redirecionada
   } else {
@@ -323,12 +326,16 @@ login.addEventListener('input', function () {
 
   login.value = inputValue; // Define o valor do campo sem os números
 
-  if (inputValue.length === 6) {
-    labelLogin.textContent = "Válido";
+  if (inputValue.length === 0) {
+    labelLogin.textContent = "Login:";
+    labelLogin.style.color = "black"; // Pode definir a cor desejada para o texto normal
+    validelogin = false; // Define como inválido, se necessário
+  } else if (inputValue.length === 6) {
+    labelLogin.textContent = "Login:";
     labelLogin.style.color = "green";
     validelogin = true;
   } else {
-    labelLogin.textContent = "Incorreto. Digite exatamente 8 letras.";
+    labelLogin.textContent = "Login: *Incorreto. Digite exatamente 6 letras.";
     labelLogin.style.color = "red";
     validelogin = false;
   }

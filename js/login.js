@@ -1,11 +1,4 @@
-let login = document.querySelector('#login');
-let labelLogin = document.querySelector('#labelLogin');
-let validelogin = false;
 let btn = document.querySelector('#verSenha');
-
-let labelSenha = document.querySelector('#labelSenha');
-let senha = document.querySelector('#senha');
-let letvalidesenha = false;
 
 
 
@@ -21,53 +14,41 @@ btn.addEventListener('click', () => {
 
 
 
-
 function entrar() {
-  let usuario = document.querySelector("#login")
-  let userLabel = document.querySelector("#labelLogin")
-
-  let senha = document.querySelector("#senha")
-  let senhaLabel = document.querySelector("#labelSenha")
-
-
-  let mensagem = document.querySelector("#mensagem")
-
-  let listaUser = []
+  let usuario = document.querySelector("#login");
+  let senha = document.querySelector("#senha");
+  let mensagem = document.querySelector("#mensagem");
+  let listaUser = JSON.parse(localStorage.getItem('listaUser'));
   let userValid = {
     email: '',
     user: '',
     nome: '',
     senha: '',
+  };
 
+  // Verifique se os campos de login e senha estão preenchidos
+  if (usuario.value.trim() === "" || senha.value.trim() === "") {
+    mensagem.innerHTML = "Preencha todos os campos!";
+    return; // Impede que o formulário seja enviado
   }
 
-  listaUser = JSON.parse(localStorage.getItem('listaUser'))
-
   listaUser.forEach((item) => {
-    if (usuario.value == item.login && senha.value == item.senha) {
+    if (usuario.value === item.login && senha.value === item.senha) {
       userValid = {
         nome: item.nome,
         user: item.login,
         senha: item.senha,
-        email: item.email
-      }
+        email: item.email,
+      };
     }
-  })
-if(usuario.value == userValid.user && senha.value == userValid.senha ){
-  
+  });
+
+  if (usuario.value === userValid.user && senha.value === userValid.senha) {
     window.open("http://127.0.0.1:5501/html/cpaas.html", "_blank");
-
-let token = Math.random().toString(16).substr(2)
-localStorage.setItem('token', token)
-}else{
-  
-  userLabel.setAttribute('style', 'color: red')
-  usuario.setAttribute('style', 'border-color:red')
-  senhaLabel.setAttribute('style', 'color: red')
-  senha.setAttribute('style', 'border-color:red')
-  mensagem.innerHTML= "usuário ou senha incorretos"
-  usuario.focus()
-}
-
-
+    let token = Math.random().toString(16).substr(2);
+    localStorage.setItem('token', token);
+  } else {
+    mensagem.innerHTML = "Usuário ou senha incorretos";
+    usuario.focus();
+  }
 }

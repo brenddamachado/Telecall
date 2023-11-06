@@ -7,19 +7,7 @@ let labelSenha = document.querySelector('#labelSenha');
 let senha = document.querySelector('#senha');
 let letvalidesenha = false;
 
-senha.addEventListener('input', () => {
-  senha.value = senha.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
 
-  if (senha.value.length < 8) {
-    labelSenha.setAttribute('style', 'color: red');
-    labelSenha.innerHTML = 'Senha *Insira no mínimo 8 caracteres';
-    validesenha = false;
-  } else {
-    labelSenha.setAttribute('style', 'color: green');
-    labelSenha.innerHTML = 'Senha';
-    validesenha = true;
-  }
-});
 
 
 btn.addEventListener('click', () => {
@@ -31,24 +19,51 @@ btn.addEventListener('click', () => {
   }
 })
 
-login.addEventListener('input', function () {
-  let inputValue = login.value;
 
-  // Remova espaços em branco do início e do final do valor
-  inputValue = inputValue.trim();
 
-  // Remova todos os números do valor
-  inputValue = inputValue.replace(/\d/g, '');
 
-  login.value = inputValue; // Define o valor do campo sem os números
+function entrar() {
+  let usuario = document.querySelector("#login")
+  let userLabel = document.querySelector("#labelLogin")
 
-  if (inputValue.length === 6) {
-    labelLogin.textContent = "Login:";
-    labelLogin.style.color = "green";
-    validelogin = true;
-  } else {
-    labelLogin.textContent = "Login: Digite exatamente 8 letras.";
-    labelLogin.style.color = "red";
-    validelogin = false;
+  let senha = document.querySelector("#senha")
+  let senhaLabel = document.querySelector("#labelSenha")
+
+
+  let mensagem = document.querySelector("#mensagem")
+
+  let listaUser = []
+  let userValid = {
+    email: '',
+    user: '',
+    nome: '',
+    senha: '',
+
   }
-});
+
+  listaUser = JSON.parse(localStorage.getItem('listaUser'))
+
+  listaUser.forEach((item) => {
+    if (usuario.value == item.login && senha.value == item.senha) {
+      userValid = {
+        nome: item.nome,
+        user: item.login,
+        senha: item.senha,
+        email: item.email
+      }
+    }
+  })
+if(usuario.value == userValid.user && senha.value == userValid.senha ){
+  alert('certo')
+}else{
+  
+  userLabel.setAttribute('style', 'color: red')
+  usuario.setAttribute('style', 'border-color:red')
+  senhaLabel.setAttribute('style', 'color: red')
+  senha.setAttribute('style', 'border-color:red')
+  mensagem.innerHTML= "usuário ou senha incorretos"
+  usuario.focus()
+}
+
+
+}

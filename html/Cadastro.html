@@ -27,6 +27,9 @@
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+
+  <link rel="stylesheet" href="../css/dark.css">
 </head>
 
 <body>
@@ -36,13 +39,24 @@
         <img src="../imgs/telecall_logo1.png" class="logo" alt="telecall">
         <h1 class="nome-empresa">Telecall</h1>
       </div>
+      <div class="mode">
+        <input type="checkbox" class="checkbox" id="chk">
+        <label class="label" for="chk">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+      
       <div class="login-cadastro-container">
         <ul class="containe">
           <li class="nav"> <a href="../index.html" target="_blank" class="guia">Inicio</a> </li>
           <li class="nav"> <a href="Login.html" target="_blank" class="guia">Login</a></li>
         </ul>
       </div>
-    </nav>
+
+  </nav>
+
   </header>
 
 
@@ -214,6 +228,7 @@
   </footer>
 
   <script src="../js/script.js"></script>
+  <script src="../js/dark.js"></script>
 </body>
 
 </html>

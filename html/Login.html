@@ -14,12 +14,12 @@
 
   <!--  icone do lado do title -->
   <link rel="icon" type="image/x-icon" href="../imgs/telecall_logo1.png">
-  <!--  icone do lado do title -->  <!-- boot css-->
+  <!--  icone do lado do title --> <!-- boot css-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!-- boot css-->
-<script src="../js/login.js" defer></script>
 
+  <link rel="stylesheet" href="../css/dark.css">
 
 </head>
 
@@ -30,21 +30,31 @@
         <img src="../imgs/telecall_logo1.png" class="logo" alt="telecall">
         <h1 class="nome-empresa">Telecall</h1>
       </div>
+      <div class="mode">
+        <input type="checkbox" class="checkbox" id="chk">
+        <label class="label" for="chk">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
       <div class="login-cadastro-container">
         <ul class="containe">
           <li class="nav"> <a href="../index.html" target="_blank" class="guia">Inicio</a> </li>
           <li class="nav"> <a href="Cadastro.html" target="_blank" class="guia">Cadastro</a></li>
         </ul>
       </div>
+
     </nav>
   </header>
 
   <div id="login-container">
-    <form class="form_login" >
-      
+    <form class="form_login">
+
 
       <label class="label_login" id="labelLogin" for="login" class="form">Login:</label>
-      <input  autofocus class="input_login" type='text' id='login' name='login' placeholder="Digite um login" maxlength="6">
+      <input autofocus class="input_login" type='text' id='login' name='login' placeholder="Digite um login"
+        maxlength="6">
 
       <label class="label_login" id="labelSenha" for="senha" class="form"> Senha:</label>
       <div class="password-container">
@@ -54,7 +64,7 @@
       </div>
 
       <div id="mensagem"></div>
-      
+
     </form>
     <button onclick="entrar ()" class="btn_entrar" type="submit"> Entrar</button>
 
@@ -145,6 +155,9 @@
       </div>
     </div>
   </footer>
+
+  <script src="../js/login.js" defer></script>
+  <script src="../js/dark.js"></script>
 </body>
 
 </html>

@@ -14,12 +14,14 @@
 
   <!--  icone do lado do title -->
   <link rel="icon" type="image/x-icon" href="../imgs/telecall_logo1.png">
-  <!--  icone do lado do title --> <!-- boot css-->
+  <!--  icone do lado do title -->
+  <!-- boot css-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!-- boot css-->
 
   <link rel="stylesheet" href="../css/dark.css">
+  <link rel="stylesheet" href="../css/acessibilidade.css">
 
 </head>
 
@@ -48,6 +50,14 @@
     </nav>
   </header>
 
+  <div class="font-menu">
+    <button id="font-toggle"><i id="icon_ac" class="fa-solid fa-caret-down"></i></button>
+    <div class="font-options">
+        <button id="increase-font">Aumentar</button>
+        <button id="decrease-font">Diminuir</button>
+        <button id="reset-font">Restaurar</button>
+    </div>
+  </div>
   <div id="login-container">
     <form class="form_login">
 
@@ -156,8 +166,10 @@
     </div>
   </footer>
 
-  <script src="../js/login.js" defer></script>
+  <script src="../js/login.js"></script>
   <script src="../js/dark.js"></script>
+  <script src="../js/acessibilidade.js"></script>
+
 </body>
 
 </html>

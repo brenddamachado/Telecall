@@ -14,7 +14,7 @@ body {
 }
 
 body.dark {
-    background-color: #232c35;
+    background-color:black;
     color: #dcdcdc;
 }
 
@@ -80,3 +80,16 @@ body.dark header {
   align-items: center;
   
     }
+    .dark .label_login{
+        color: #111;
+    }
+
+    .dark #login-container{
+        background-color: #7e7e7e;
+    }
+
+    .dark #input_group .input_email {
+        background-color: black;
+          padding: 0.75rem;
+          width: 100%;
+        }

@@ -37,6 +37,7 @@
     crossorigin="anonymous"></script>
   <!-- boot javascrit-->
   <link rel="stylesheet" href="css/dark.css">
+  <link rel="stylesheet" href="css/acessibilidade.css">
 
 </head>
 
@@ -68,6 +69,8 @@
     </nav>
 
   </header>
+
+
 
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner">
@@ -107,7 +110,14 @@
   </main>
   <!--criei essa div para as configurações dos titulos da página !-->
 
-  
+  <div class="font-menu">
+    <button id="font-toggle"><i id="icon_ac" class="fa-solid fa-caret-down"></i></button>
+    <div class="font-options">
+        <button id="increase-font">Aumentar</button>
+        <button id="decrease-font">Diminuir</button>
+        <button id="reset-font">Restaurar</button>
+    </div>
+</div>
   <br>
   <div class="titulos">
     <h2>Soluções Inteligentes para sua empresa</h2>
@@ -230,6 +240,7 @@
 
   <script src="script.js"></script>
   <script src="js/dark.js"></script>
+  <script src="js/acessibilidade.js"></script>
 
 </body>
 

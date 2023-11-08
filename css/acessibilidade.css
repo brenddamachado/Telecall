@@ -1,0 +1,36 @@
+.font-menu {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#font-toggle i {
+    font-size: 2rem; /* Defina o tamanho do ícone desejado */
+    width: 30px; /* Defina a largura desejada do ícone */
+    /* Outros estilos, se necessário */
+}
+
+.font-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.font-options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.font-options button:hover {
+    background-color: #f0f0f0;
+}

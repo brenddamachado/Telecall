@@ -280,7 +280,7 @@ function cadastrar() {
 
       localStorage.setItem('listaUser', JSON.stringify(listaUser));
       setTimeout(()=>{
-        window.open("http://127.0.0.1:5501/html/Login.html", "_blank");
+        window.open("https://projetotelecall.rianefm.repl.co/html/Login.html", "_blank");
     }, 3000)
 
     document.getElementById('mensagem').innerHTML = 'Cadastro realizado com sucesso!';

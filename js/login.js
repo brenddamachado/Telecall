@@ -44,7 +44,7 @@ function entrar() {
   });
 
   if (usuario.value === userValid.user && senha.value === userValid.senha) {
-    window.open("http://127.0.0.1:5501/html/cpaas.html", "_blank");
+    window.open("https://projetotelecall.rianefm.repl.co/html/cpaas.html", "_blank");
     let token = Math.random().toString(16).substr(2);
     localStorage.setItem('token', token);
   } else {

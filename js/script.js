@@ -52,12 +52,12 @@ nome.addEventListener('input', () => {
   nome.value = nome.value.replace(/[^a-zA-Z\s]/g, '');
 
   if (nome.value.length >= 15 && nome.value.length < 60) {
-    labelNome.setAttribute('style', 'color: green');
-    labelNome.innerHTML = 'Nome';
+    labelNome.setAttribute('style', 'color: black');
+    labelNome.innerHTML = 'Nome:';
     validenome = true;
   } else {
-    labelNome.setAttribute('style', 'color: red');
-    labelNome.innerHTML = 'Nome *insira no mínimo 15 caracteres';
+    labelNome.setAttribute('style', 'color: maroon');
+    labelNome.innerHTML = 'Nome: *insira no mínimo 15 caracteres';
     validenome = false;
   }
 });
@@ -67,12 +67,12 @@ senha.addEventListener('input', () => {
   senha.value = senha.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
 
   if (senha.value.length < 8) {
-    labelSenha.setAttribute('style', 'color: red');
-    labelSenha.innerHTML = 'Senha *Insira no mínimo 8 caracteres';
+    labelSenha.setAttribute('style', 'color: maroon');
+    labelSenha.innerHTML = 'Senha: *Insira no mínimo 8 caracteres';
     validesenha = false;
   } else {
-    labelSenha.setAttribute('style', 'color: green');
-    labelSenha.innerHTML = 'Senha';
+    labelSenha.setAttribute('style', 'color: black');
+    labelSenha.innerHTML = 'Senha:';
     validesenha = true;
   }
 });
@@ -81,12 +81,12 @@ senha2.addEventListener('input', () => {
   senha2.value = senha2.value.replace(/[^a-zA-Z]/g, ''); // Remove caracteres não alfabéticos
 
   if (senha.value !== senha2.value) {
-    labelConfirmacao.setAttribute('style', 'color: red');
-    labelConfirmacao.innerHTML = 'Confirmação de Senha *As senhas não conferem';
+    labelConfirmacao.setAttribute('style', 'color: maroon');
+    labelConfirmacao.innerHTML = 'Confirmação de Senha: *As senhas não conferem';
     validesenha2 = false;
   } else {
-    labelConfirmacao.setAttribute('style', 'color: green');
-    labelConfirmacao.innerHTML = 'Confirmação de Senha';
+    labelConfirmacao.setAttribute('style', 'color: black');
+    labelConfirmacao.innerHTML = 'Confirmação de Senha:';
     validesenha2 = true;
   }
 });
@@ -96,12 +96,12 @@ mae.addEventListener('input', () => {
   mae.value = mae.value.replace(/\d/g, ''); // Remove números
   nome.value = nome.value.replace(/[^a-zA-Z\s]/g, ''); // Remove caracteres não alfabéticos
   if (mae.value.length >= 15 && nome.value.length < 60) {
-    labelMae.setAttribute('style', 'color: green');
-    labelMae.innerHTML = 'Nome da mãe';
+    labelMae.setAttribute('style', 'color: black');
+    labelMae.innerHTML = 'Nome Materno:';
     validemae = true;
   } else {
-    labelMae.setAttribute('style', 'color: red');
-    labelMae.innerHTML = 'Nome da mãe *insira no mínimo 15 caracteres';
+    labelMae.setAttribute('style', 'color: maroon');
+    labelMae.innerHTML = 'Nome Materno: *insira no mínimo 15 caracteres';
     validemae = false;
   }
 });
@@ -150,13 +150,13 @@ cpf.addEventListener('input', () => {
   const isCPFValid = validarCPF(cpf.value);
 
   if (isCPFValid) {
-    labelCpf.setAttribute('style', 'color: green');
-    labelCpf.innerHTML = 'CPF válido';
+    labelCpf.setAttribute('style', 'color: black');
+    labelCpf.innerHTML = 'CPF:';
     cpf.value = isCPFValid; // Define o valor da entrada como o CPF formatado
     validecpf = true;
   } else {
-    labelCpf.setAttribute('style', 'color: red');
-    labelCpf.innerHTML = 'CPF inválido';
+    labelCpf.setAttribute('style', 'color: maroon');
+    labelCpf.innerHTML = 'CPF: *inválido';
     validecpf = false;
   }
 });
@@ -182,13 +182,13 @@ function validarEmail(email) {
   var regex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
   if (regex.test(email)) {
-    labelEmail.style.color = 'green'; // E-mail válido, cor verde
-    labelEmail.innerHTML = 'E-mail válido';
+    labelEmail.style.color = 'black'; // E-mail válido, cor verde
+    labelEmail.innerHTML = 'E-mail:';
     valideemail = true;
 
   } else {
-    labelEmail.style.color = 'red'; // E-mail inválido, cor vermelha
-    labelEmail.innerHTML = 'E-mail inválido';
+    labelEmail.style.color = 'maroon'; // E-mail inválido, cor vermelha
+    labelEmail.innerHTML = 'E-mail: *inválido';
     valideemail = false;
 
   }
@@ -218,12 +218,12 @@ function validarCep(cep) {
   var regex = /^[0-9]{8}$/;
 
   if (regex.test(cep)) {
-    labelCep.css("color", "green");
-    labelCep.html('Cep válido');
+    labelCep.css("color", "black");
+    labelCep.html('Cep:');
     validecep = true;
   } else {
-    labelCep.css("color", "red");
-    labelCep.html('Cep inválido');
+    labelCep.css("color", "maroon");
+    labelCep.html('Cep: *inválido');
     validecep = false;
   }
 
@@ -233,21 +233,21 @@ function validarCep(cep) {
     fetch(url)
       .then((response) => {
         if (!response.ok) {
-          labelCep.css("color", "red");
+          labelCep.css("color", "maroon");
           throw new Error('Não foi possível obter os dados do CEP.');
         }
         return response.json();
       })
       .then((data) => {
         if (data.erro) {
-          labelCep.css("color", "red");
+          labelCep.css("color", "maroon");
           labelCep.html('CEP não encontrado');
           validecep = false;
         } else {
-          labelCep.css("color", "green");
-          labelRua.css("color", "green");
-          labelCidade.css("color", "green");
-          labelBairro.css("color", "green");
+          labelCep.css("color", "black");
+          labelRua.css("color", "black");
+          labelCidade.css("color", "black");
+          labelBairro.css("color", "black");
           validecep = true;
         }
 
@@ -280,13 +280,13 @@ function cadastrar() {
 
       localStorage.setItem('listaUser', JSON.stringify(listaUser));
       setTimeout(()=>{
-        window.open("https://projetotelecall.rianefm.repl.co/html/Login.html", "_blank");
+        window.open("http://127.0.0.1:5501/html/Login.html", "_blank");
     }, 3000)
 
     document.getElementById('mensagem').innerHTML = 'Cadastro realizado com sucesso!';
 
 
-      return false; // Impede o envio do formulário, já que a página será redirecionada
+      return false; // Impede o envio do formulário, já que a página será maroonirecionada
   } else {
       document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
       return false; // Impede o envio do formulário em caso de erro
@@ -332,11 +332,11 @@ login.addEventListener('input', function () {
     validelogin = false; // Define como inválido, se necessário
   } else if (inputValue.length === 6) {
     labelLogin.textContent = "Login:";
-    labelLogin.style.color = "green";
+    labelLogin.style.color = "black";
     validelogin = true;
   } else {
     labelLogin.textContent = "Login: *Incorreto. Digite exatamente 6 letras.";
-    labelLogin.style.color = "red";
+    labelLogin.style.color = "maroon";
     validelogin = false;
   }
 });

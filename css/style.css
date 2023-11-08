@@ -4,7 +4,29 @@
   outline: 0;
 }
 
+@keyframes moveLetters {
+  0% {
+      transform: translateY(10rem) rotateY(-30deg);
+  }
 
+  100% {
+      transform: translateY(0) rotateY(0);
+      opacity: 1;
+      /* Mova as letras 100px para a direita */
+  }
+}
+@keyframes animacao {
+  0% {
+      transform: scale(1.3);
+  }
+  100% {
+      transform: scale(1);
+  }
+  
+}
+#ft{
+  animation: animacao 25s;
+}
 
 /* Estilos para o header */
 header {
@@ -115,6 +137,9 @@ textarea:focus,
   border-bottom: 2px solid #08558B;
 }
 
+.tudorj{
+  margin-top: 60px;
+}
 #forgot-pass {
   display: block;
   text-align: right;
@@ -132,7 +157,9 @@ textarea:focus,
   background-color: #08558B;
   font-weight: bold;
 }
-
+#sobre_tlcll{
+  margin-right: 50px;
+}
 .input_login[type="submit"]:hover {
   background-color: #1B223C;
   transition: .5s;
@@ -293,7 +320,7 @@ footer_tudo {
 }
 
 #input_group .input_email {
-background-color:#e9e9e9;
+background-color: bl;
   padding: 0.75rem;
   width: 100%;
 }
@@ -385,7 +412,7 @@ background-color:#e9e9e9;
 .container_principal {
   display: flex; /* Usar flexbox para posicionar os elementos lado a lado */
   align-items: center; /* Alinhar verticalmente os elementos */
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .ft {
@@ -423,4 +450,10 @@ background-color:#e9e9e9;
   font-weight: bold;
   width: 100%;
 }
-
+.lugares{
+  display: block; /* Certifique-se de que a imagem seja exibida como um bloco */
+  margin-left: auto; /* Define a margem esquerda como "auto" */
+  margin-right: auto; /* Define a margem direita como "auto" */
+width: 100%;
+margin-bottom: 50px;
+}

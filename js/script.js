@@ -45,6 +45,10 @@ const emailInput = document.getElementById('email');
 const labelEmail = document.getElementById('labelEmail');
 let valideemail = false;
 
+const n = document.getElementById('n');
+const celular = document.getElementById('numeroCelular');
+const telefone = document.getElementById('tel');
+const cpf = document.getElementById('cpf');
 
 
 nome.addEventListener('input', () => {
@@ -269,27 +273,42 @@ function cadastrar() {
   // Validações dos campos
 
   if (validenome && validesenha && validesenha2 && validecep && validecpf && valideemail && validemae && validelogin) {
-      let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]');
 
-      listaUser.push({
-          nome: nome.value,
-          login: login.value,
-          email: emailInput.value,
-          senha: senha.value
-      });
+    listaUser.push({
+      nome: nome.value,
+      login: login.value,
+      email: emailInput.value,
+      senha: senha.value
+    });
 
-      localStorage.setItem('listaUser', JSON.stringify(listaUser));
-      setTimeout(()=>{
-        window.open("http://127.0.0.1:5501/html/Login.html", "_blank");
+    localStorage.setItem('listaUser', JSON.stringify(listaUser));
+
+    // Limpar os campos
+    nome.value = '';
+    login.value = '';
+    emailInput.value = '';
+    senha.value = '';
+    senha2.value = '';  
+    cepInput.value = '';
+    n.valeu = '';
+    celular.value = '';
+    telefone.value = '';
+    cpf.value = '';
+    mae.value = '';
+    nasc.value = '';
+
+    // Abrir a página após o cadastro
+    setTimeout(() => {
+      window.open("https://projetotelecall.rianefm.repl.co/html/Login.html", "_blank");
     }, 3000)
 
     document.getElementById('mensagem').innerHTML = 'Cadastro realizado com sucesso!';
 
-
-      return false; // Impede o envio do formulário, já que a página será maroonirecionada
+    return false; // Impede o envio do formulário, já que a página será redirecionada
   } else {
-      document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
-      return false; // Impede o envio do formulário em caso de erro
+    document.getElementById('mensagem').innerHTML = 'Preencha o formulário corretamente.';
+    return false; // Impede o envio do formulário em caso de erro
   }
 }
 

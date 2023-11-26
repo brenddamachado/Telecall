@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CPaaS</title>
-   <link href="../css/cpaas.css" rel="stylesheet" type="text/css"/>
-  <link rel="icon" type="image/x-icon" href="../imgs/telecall_logo1.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  <link href="../css/cpaas.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="../imgs/nuvempng.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"/>
-  
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- boot css-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -27,152 +27,496 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <!-- boot js-->
+
+  <link rel="stylesheet" href="../css/dark.css">
+  <link rel="stylesheet" href="../css/acessibilidade.css">
 </head>
+
 <body>
-   <header>
+  <header id="header_cpaas">
     <nav>
-      <div class="Titulo">
-        CPaaS 
-      </div>    
-      
+      <div class="user">
+        <i class="fa-regular fa-user"></i>
+        <div id="logado"></div>
+      </div>
+
+      <div class="mode">
+        <input type="checkbox" class="checkbox" id="chk">
+        <label class="label" for="chk">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+
       <div class="login-cadastro-container">
         <ul class="containe">
-          <li class="nav"> <a href="/index.html">Inicio</a> </li>
-          <li class="nav"> <a href="Login.html">Login</a></li>  
+          <li class="nav"> <a onclick="sair()" href="#" class="guia">Sair</a> </li>
         </ul>
       </div>
     </nav>
   </header>
+  <div class="font-menu">
+    <button id="font-toggle"><i id="icon_ac" class="fa-solid fa-caret-down"></i></button>
+    <div class="font-options">
+      <button id="increase-font">Aumentar</button>
+      <button id="decrease-font">Diminuir</button>
+      <button id="reset-font">Restaurar</button>
+    </div>
   </div>
-<br>
-<br>
-<br>
-<br>
-    
-<div id="titulos_cpaas"> 
-<h1>CPaas: O que é ?</h1>
+  <br>
+  <div id="titulos_cpaas">
+    <h1 class="titulo_cpaas">CPaas: O que é ?</h1>
+
+    <h3>Communications Platform as a Service</h3>
     <h4>Plataforma de Comunicação como Serviço</h4>
-<hr>
+    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
   </div>
-<br>
-    
-<div id="paragrafos_cpaas">
-  <p>
-    É uma solução de software de comunicação que atua como uma base sobre a qual desenvolvedores podem integrar uma variedade de aplicativos.</p>
- </p>
 
-<p>
-  Métodos de comunição típicos, como voz, chamadas de vídeo ou mensagens de texto SMS, podem ser incorporados em outros sistemas por meio de APIs que se conectam à plataforma CPaaS.
- </p>
-  
-  <p> 
-    Essas APIs permitem que as empresas expandam suas ofertas sem a necessidade de hardware ou software adicional.
-  </p>
-   
-  </div>  
 
-<div class="imagens">
-  <div>
-    <img src="../imgs/cpaas_imagem1.png">
-  </div>  
-</div>
+  <div class="paragrafos_cpaas">
+    <p>É uma solução de software de comunicação que atua</p>
+    <p>como uma base sobre a qual desenvolvedores podem</p>
+    <p>integrar uma variedade de aplicativos.</p>
+    <br>
+    <p>Métodos de comunicação típicos, como voz, chamadas</p>
+    <p>de vídeo ou mensagens de texto SMS, podem ser</p>
+    <p>incorporados em outros sistemas por meio de APIs que</p>
+    <p>se conectam à plataforma CPaaS.</p>
+    <br>
+    <p>Essas APIs permitem que as empresas expandam suas</p>
+    <p>ofertas sem a necessidade de hardware ou software</p>
+    <p>adicional.</p>
+  </div>
+
+
+  <div class="imagens">
+    <div>
+      <img src="../imgs/cpaas_imagem1.png" width="500">
+    </div>
+  </div>
+  <!--
+  <br>
+  <br>
+  <br>
+  <div id="paragrafodiferente_cpaas">
+    <p>O CPaaS, com sua escalabilidade,
+
+      flexibilidade, autenticação e segurança
+
+      aprimoradas, está revolucionando o modo como
+      as empresas habilitadas em nuvem implementam
+
+      comunicações de voz, SMS e vídeo.</p>
+
+    <br>
+    <br>
+  </div>
 
   <br>
   <br>
+  <br>
+-->
+
   <div id="titulos_cpaas">
     CPaaS e a Transformação Digital
   </div>
-  
-  <div id="paragrafos_cpaas">
-  <p>Expectativa de crescimento estimado de
-  $ 8,2 bilhões em 2021</p>
-    
-  <p>85% dos profissionais se conectam de
-  maneira diferente com colegas e clientes do que
-  faziam há apenas 5 anos.
-</p>
+
+  <div class="paragrafos_cpaas">
+    <p>Expectativa de crescimento estimado de
+      $ 8,2 bilhões em 2021</p>
+
+    <p>85% dos profissionais se conectam de
+      maneira diferente com colegas e clientes do que
+      faziam há apenas 5 anos.
+    </p>
 
     <p>As receitas de CPaaS estão crescendo mais de
-    40% ao ano</p>
+      40% ao ano</p>
 
     <p>CPaaS já ultrapassou o mercado de UCaaS
-    (Unified Communication as a Service).
-</p>
+      (Unified Communication as a Service).
+    </p>
 
     <p>Marcas que estão em múltiplos canais
-    melhoram a experiência do usuário e aumentam
-    seus resultados.</p>
+      melhoram a experiência do usuário e aumentam
+      seus resultados.</p>
   </div>
-  
-<br>
-<br>
-  
-  <div id="titulos_cpaas"> 
-   Usos
+
+
+  <div id="titulos_cpaas">
+    Usos
   </div>
+  <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+
+  <div id="servicos">
+    <img src="../imgs/logi.png" alt="Descrição da imagem 1" width="360">
+    <img src="../imgs/varejo.png" alt="Descrição da imagem 2" width="360">
+    <img src="../imgs/call_center.png" width="360">
+    <img src="../imgs/saude.png" width="360">
+  </div>
+
+
+
+
+  <div id="titulos_cpaas">
+    Vantagens Telecall
+  </div>
+  <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
   <br>
-  <br>
-  <br>
-  
-  <div class="slider">
-    
-    <div class="slides">
-      <!-- Radio buttons -->
-      <input type="radio" name="radio-btn" id="radio1">
-      <input type="radio" name="radio-btn" id="radio2">
-      <input type="radio" name="radio-btn" id="radio3">
-      <input type="radio" name="radio-btn" id="radio4">
-      <!-- Fim Radio buttons -->
-      
-      <!--Slide images -->
-      <div class="slide first">
-      <img src="../imgs/logi.jpg">
+
+  <div id="container">
+    <!-- transforma em cards interativos -->
+    <div id="parte_cpaas">
+
+      <div id="titulos_cpaas">
+        <h5>Confiança </h5>
+
+        <h5>Agilidade</h5>
+
+        <h5>Garantia de Rede </h5>
+
+        <h5>Suporte ao Cliente</h5>
+
+        <h5>Preço</h5>
+        <br>
+        <br>
       </div>
-    
-     <div class="slide">
-      <img src="../imgs/varejo.jpg">
-     </div>   
-    
-     <div class="slide">
-      <img src="../imgs/call_center.jpg">
-     </div>
-      
-     <div class="slide">
-     <img src="../imgs/Saude.jpg">
-     </div>
-     <!-- Fim de slides-->
-      
-     <!--Navigation auto -->
-      <div class="navigation-auto">
-        <div class="auto-btn1"></div>
-        <div class="auto-btn2"></div>
-        <div class="auto-btn3"></div>
-        <div class="auto-btn4"></div>
-      </div>
-      
-    </div>  
 
-  <div class="navigation-manual">
-    <label for="radio1" class="manual-btn"></label>
-    <label for="radio2" class="manual-btn"></label>
-    <label for="radio3" class="manual-btn"></label>
-    <label for="radio4" class="manual-btn"></label>
+      <div class="paragrafos_cpaas">
+        <h5>Empresa que já conhecem e confiam;</h5>
+        <br>
+
+        <h5>Aplicativos de rápida implementação</h5>
+        <br>
+
+
+        <h5>Rede própria de alta capacidade e controle total de ponta-a-ponta;</h5>
+        <br>
+
+        <h5>Representantes locais de vendas e suporte;</h5>
+        <br>
+
+        <h5>Melhor custo benefício para um conjunto completo de recursos e serviços;</h5>
+        <br>
+        <br>
+      </div>
+      <br>
+      <br>
+
+    </div>
+
+  </div>
+  <!-- aqui termina os cards que devo criar, estou achando a página muito estática-->
+  <div id="titulos_cpaas">
+    Soluções
+  </div>
+  <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+  <br>
+
+  <div id="servicos">
+
+    <a href="#container_2fa">
+      <img src="../imgs/2FA.png" alt="2FA" width="300">
+    </a>
+
+    <a href="#numero_mascara">
+      <img src="../imgs/Máscara.png" alt="Número de Máscara" width="300">
+    </a>
+
+    <a href="#googleVerified">
+      <img src="../imgs/Google.png" alt="Google Verified Calls" width="300">
+    </a>
+
+    <a href="caminho/do/seu/link">
+      <img src="../imgs/SMS.png" alt="SMS Programável" width="300">
+    </a>
+  </div>
+
+  <div id="container_2fa">
+
+    <div id="titulos_cpaas">
+      2FA
+    </div>
+
+    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+    <br>
+    <div id="titulos_cpaas">
+      <h3>Two-Factor Authentication</h3>
+      <h4>Autenticação de dois fatores</h4>
+    </div>
+
+
+    <p class="paragrafos_cpaas"> O 2FA é um procedimento de segurança que garante que serão
+      necessários 2 fatores únicos para liberação de uma ação.<br> O
+      primeiro fator é a senha que o usuário e o segundo pode ser
+      autenticado via token, via detecção de impressão digital,<br>
+      reconhecimento facial, código enviado via sms, entre outros.</p>
+
+    <div id="imagem">
+      <img src="../imgs/autenticacao.svg" alt="2FA" width="300">
+    </div>
+    <div class="paragrafos_cpaas">
+      O 2FA permite que você:
+    </div>
+    <div class="paragrafos_cpaas">
+      • Envie uma senha via SMS, voz ou e-mail para autenticação do usuário.<br>
+      • Adicione uma camada extra de segurança além da senha pessoal.<br>
+      • Ofereça maior segurança para usuários.
+    </div>
+    <br>
+    <br>
+    <div id="titulos_cpaas">
+      Fortaleça a estratégia de segurança de seu negócio.
+    </div>
+
+    <div class="paragrafos_cpaas">
+      Adicionar um número de telefone de recuperação a uma
+      conta individual pode bloquear até:
+    </div>
+    <div class="paragrafos_cpaas">
+      100% dos bots automatizados,<br>
+
+      99% dos ataques de phishing em massa,<br>
+
+      e 66% dos ataques direcionados.
+    </div>
+
+    <div id="titulos_cpaas">
+      Como funciona?
+    </div>
+    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+    <!-- vou tiar
+      <div id="card-area">
+        <div class="wrapper">
+          <div class="box-area">
+            <div class="box">
+              <img src="../imgs/cpaascard1.png" alt="computador com login e senha em sua tela" width="200">
+              <div class="overlay">
+                <p>Usuário acessa seu site o
+                  aplicativo e digita a senha
+                  cadastrada para entrar em
+                  seu perfil ou completar uma
+                  transação.</p>
+              </div>
+              <div class="box">
+                <img src="../imgs/cpaascard2.png" alt="sinal de alerta" width="200">
+                <div class="overlay">
+                  <p>A Telecall recebe a tentativa
+                    de login e solicita que o
+                    usuário insira seu número de
+                    telefone para autorizar o
+                    acesso.</p>
+                </div>
+              </div>
+              <div class="box">
+                <img src="../imgs/cpaascard3.png" alt="celular com número pin" width="200">
+                <div class="overlay">
+                  <p>Após inserir seu número, a
+                    Telecall envia para o usuário
+                    por SMS, chamada ou e-mail
+                    um código PIN de uso único.
+                    Esse código PIN é também
+                    conhecido como OTP (One
+                    Time Password).</p>
+                </div>
+              </div>
+              <div class="box">
+                <img src="../imgs/cpaascard4.png" alt="computador  com código" width="200">
+                <div class="overlay">
+                  <p>O usuário insere o código no
+                    site ou aplicativo para
+                    concluir o processo de
+                    verificação.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div id="titulos_cpaas">
+        Beneficios
+      </div>
+
+      <div class="paragrafos_cpaas">
+        • Ofereça segurança aprimorada para seus clientes.<br>
+
+        • API simples e de rápida implementação.<br>
+        • Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail.<br>
+        • Flexibilidade de canais garante que o usuário conseguirá completar a tarefa desejada
+        mesmo quando tiver problema com um deles.Exemplo: Enviar OTP por SMS, em caso de
+        falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.<br>
+        • Reduza casos de fraude e invasões e evite o acesso a dados por invasores.<br>
+
+        • Plataforma intuitiva que permite visualizar relatórios de uso por dia, mês ou ano e pesquisar usando diversos
+        critérios de filtro.<br>
+      </div>
+
   </div>
 
 
+  <!-- NÚMERO MÁSCARA -->
+  <div id="numero_mascara">
+    <div class="container-masc">
+      <div class="primeirapart">
+        <h2 class="titulo_mascara">NÚMERO MÁSCARA</h2>
+        <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+        <div class="segundapart">
+          <p class="paragrafos_cpaas">Proteja identidades profissionais.</p>
+          <p class="paragrafos_cpaas">Garanta aos seus clientes a capacidade de fazer chamadas e enviar mensagens sem
+            expor seus números de
+            telefones
+            pessoais.</p>
 
-    
-</div>
+          <div class="paragrafos_cpaas">
+            • Mascare um número de telefone para interações com mais
+            privacidade.<br>
+            • Permite que empresas façam negócios usando menos
+            números de telefone.<br>
+            • Oferece uma experiência mais segura e profissional.
+          </div>
+        </div>
+      </div>
+      <img id="mascaranumero" src='../imgs/numero-mascara.png'>
+    </div>
+    <div>
+      <div class="nome_hr">
+        <h2 class="titulo_mascara"> Como Funciona?</h2>
+        <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+      </div>
+      <div class="card-container">
+        <div class="card1_3">
+          <p>Usuário faz uma chamada através de um aplicativo.</p>
+          <img src="../imgs/mascaranum_icon.png" alt="Imagem 1">
+          <p>Ex: usuário liga para o entregador ou motorista de táxi ou entra em contato com a central de atendimento.
+          </p>
+        </div>
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+        </div>
+        <div class="card1_3">
+          <p>Plataforma
+            mascara o número
+            original.</p>
+          <img src="../imgs/mascaranum_icon2.png" alt="Imagem 2">
+          <p>A plataforma recebe a
+            chamada e mascara o
+            número antes de conectar
+            com o destinatário.</p>
+        </div>
+        <div class="arrow-icon">
+          <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+        </div>
+        <div class="card1_3">
+          <p>Ambas as partes
+            são conectadas.</p>
+          <img src="../imgs/mascaranum_icon3.png" alt="Imagem 3">
+          <p>A plataforma conecta ambas
+            as partes mantendo a
+            privacidade dos dois.</p>
+        </div>
+      </div>
+      <div class="nome_hr">
+        <h2 class="titulo_mascara">Quem usa?</h2>
+        <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+      </div>
+
+      <div id="card_comofunciona">
+        <div class="card_como">
+          <i class="fa-solid fa-car" style="color: #757575;"></i>
+          <h4>Apps de Transporte</h4>
+          <p>Permite que motorista e
+            passageiro se comuniquem
+            sem compartilhar seus
+            números pessoais.</p>
+        </div>
+        <div class="card_como">
+          <i class="fa-solid fa-mobile-screen-button" style="color: #757575;"></i>
+          <h4>Apps de
+            Relacionamento</h4>
+          <p>Permite uma maneira
+            privada e segura para
+            usuários interagirem sem
+            expor contatos pessoais.</p>
+        </div>
+        <div class="card_como">
+          <i class="fa-solid fa-cart-shopping" style="color: #757575;"></i>
+          <h4>E-Commerce</h4>
+          <p>Permite que clientes
+            entrem em contato através
+            do aplicativo. Podem
+            também integrar chamadas
+            internacionais.</p>
+        </div>
+        <div class="card_como">
+          <i class="fa-solid fa-truck-fast" style="color: #757575;"></i>
+          <h4>Entregas
+            & Logística
+          </h4>
+          <P>
+            Mantenha seu cliente
+            informado sobre
+            entregas e serviços, tire
+            dúvidas, etc
+          </P>
+        </div>
+
+      </div>
+      <h3 id="restante">43% das empresas brasileiras adotou o Home
+        Office como padrão. Mesmo após o fim da pandemia, estatísticas
+        indicam que o modelo de trabalho Home
+        Office deve crescer cerca de 30%.
+      </h3>
+      <p class="paragrafos_cpaas">Funcionários que não possuem celular empresarial ou ramal
+        virtual podem se beneficiar do uso de um número máscara
+        permanente do trabalho vinculado ao seu telefone celular,
+        assim protegendo seus número pessoais.
+      </p>
+
+
+    </div>
+    <!-- NÚMERO MÁSCARA -->
+
+
+    <!--GOOGLE VERIFIED CALLS -->
+    <!--criei esse id para chamar naquela foto e ir direto para essa parte, ok?-->
+
+    <div id="googleVerified">
+      <div id="titulos_cpaas">
+        Google Verified Calls
+      </div>
+      <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+      <p class="paragrafos_cpaas">
+        Esse novo recurso do Google, exclusivo para
+        telefones Android, permite que empresas exibam
+        para o cliente na hora da chamada<br>
+        sua marca,
+        logotipo e até mesmo o motivo da chamada.
+        <br>
+        A Telecall é a primeira operadora de telecom no
+        Brasil a oferecer esse recurso do Google.
+      </p>
+
+    </div>
 
 
 
-    
-
-  
 
 
-        
+
+
+
+
+
+    <script src="../js/cpaas.js"></script>
+    <script src="../js/dark.js"></script>
+    <script src="../js/acessibilidade.js"> </script>
 </body>
- 
-  
+
 </html>

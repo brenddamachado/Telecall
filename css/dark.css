@@ -1,90 +1,114 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
 
 body {
-    background-color: #f2f2f2;
-   
-    height: 100vh;
-    margin: 0;
-    transition: background 0.2s linear;
+  background-color: #fafafa;
+
+  height: 100vh;
+  margin: 0;
+  transition: background 0.2s linear;
 }
 
 body.dark {
-    background-color:black;
-    color: #dcdcdc;
+  background-color:black;
+  color: #dcdcdc;
 }
 
 .checkbox {
-    opacity: 0;
-    position: absolute;
+  opacity: 0;
+  position: absolute;
 }
 
 .label{
-    background-color: #111;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    height: 26px;
-    width: 50px;
-    transform: scale(1.5);
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
 }
 
 .label .ball{
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 22px;
-    width: 22px;
-    transform: translate(0px);
-    transition: tranform 0.2s linear ;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translate(0px);
+  transition: tranform 0.2s linear ;
 }
 
 .checkbox:checked + .label .ball{
-    transform:  translateX(24px);
+  transform:  translateX(24px);
 }
 
 .fa-moon{
-    color: #f1c40f;
+  color: #f1c40f;
 }
 
 .fa-sun{
-    color: #f39c12;
+  color: #f39c12;
 }
 
 body.dark header {
-    background: #800000; /* Cor de fundo vermelho vinho mais escura */
-    /* Use cores mais escuras para o fundo do header no modo escuro */
+  background: #800000; /* Cor de fundo vermelho vinho mais escura */
+  /* Use cores mais escuras para o fundo do header no modo escuro */
+}
+
+.dark .login-cadastro-container .guia{
+  color: #fff;
+}
+
+  .dark #footer_content {
+      background: linear-gradient(to right, #111 20%, #444 50%);
+
   }
 
-  .dark .login-cadastro-container .guia{
-    color: #fff;
+  .mode{
+      display: flex;
+justify-content: center;
+align-items: center;
+
+  }
+  .dark .label_login{
+      color: #111;
   }
 
-    .dark #footer_content {
-        background: linear-gradient(to right, #111 20%, #444 50%);
+  .dark #login-container{
+      background-color: #7e7e7e;
+  }
 
-    }
+  .dark #input_group .input_email {
+      background-color: black;
+        padding: 0.75rem;
+        width: 100%;
+      }
 
-    .mode{
-        display: flex;
-  justify-content: center;
-  align-items: center;
-  
-    }
-    .dark .label_login{
-        color: #111;
-    }
+.dark #header_cpaas{
+   background-color:#0c75ae;
+}
 
-    .dark #login-container{
-        background-color: #7e7e7e;
-    }
+.dark .card-text{
+  color: #fff;
+}
 
-    .dark #input_group .input_email {
-        background-color: black;
-          padding: 0.75rem;
-          width: 100%;
-        }
+.dark .card{
+  background-color: #232c35;
+}
+.dark #footer_footer{
+   background-color:#0c75ae;
+
+}
+.dark .model{
+  color: black;
+}

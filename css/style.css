@@ -6,26 +6,32 @@
 
 @keyframes moveLetters {
   0% {
-      transform: translateY(10rem) rotateY(-30deg);
+    transform: translateY(10rem) rotateY(-30deg);
   }
 
   100% {
-      transform: translateY(0) rotateY(0);
-      opacity: 1;
-      /* Mova as letras 100px para a direita */
+    transform: translateY(0) rotateY(0);
+    opacity: 1;
+    /* Mova as letras 100px para a direita */
   }
 }
+
 @keyframes animacao {
   0% {
-      transform: scale(1.3);
+    transform: scale(1.2);
   }
+
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
-  
+
 }
-#ft{
+
+#ft {
   animation: animacao 25s;
+    float: left;
+    /* Flutuar a imagem para a esquerda */
+  width: 100%;
 }
 
 /* Estilos para o header */
@@ -88,7 +94,7 @@ textarea:focus,
 }
 
 .a_login {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .a_login:hover {
@@ -137,9 +143,6 @@ textarea:focus,
   border-bottom: 2px solid #08558B;
 }
 
-.tudorj{
-  margin-top: 60px;
-}
 #forgot-pass {
   display: block;
   text-align: right;
@@ -157,9 +160,12 @@ textarea:focus,
   background-color: #08558B;
   font-weight: bold;
 }
-#sobre_tlcll{
+
+#sobre_tlcll {
   margin-right: 50px;
+  font-size: 20px;
 }
+
 .input_login[type="submit"]:hover {
   background-color: #1B223C;
   transition: .5s;
@@ -320,7 +326,7 @@ footer_tudo {
 }
 
 #input_group .input_email {
-background-color: bl;
+  background-color: bl;
   padding: 0.75rem;
   width: 100%;
 }
@@ -351,10 +357,14 @@ background-color: bl;
 }
 
 .mensagem-validacao {
-  color: red; /* Cor do texto da mensagem */
-  font-size: 14px; /* Tamanho da fonte da mensagem */
-  margin-top: 5px; /* Espaço entre os campos e as mensagens */
+  color: red;
+  /* Cor do texto da mensagem */
+  font-size: 14px;
+  /* Tamanho da fonte da mensagem */
+  margin-top: 5px;
+  /* Espaço entre os campos e as mensagens */
 }
+
 .error-message {
   color: red;
   font-size: 14px;
@@ -362,19 +372,19 @@ background-color: bl;
   margin-top: 5px;
 }
 
-/*  css dos titulos e seus paragrafos  */ 
+/*  css dos titulos e seus paragrafos  */
 
-.titulos{
+.titulos {
   margin: 30px;
-  color:#183269;
+  color: #183269;
 }
 
-.texto{
-   margin: 30px;
-   font-size: 120%;
+.texto {
+  margin: 30px;
+  font-size: 120%;
 }
 
-#msgError{
+#msgError {
   text-align: center;
   color: #ff0000;
   background-color: #ffbbbb;
@@ -382,7 +392,8 @@ background-color: bl;
   border-radius: 4px;
   display: none;
 }
-#msgSuccess{
+
+#msgSuccess {
   text-align: center;
   color: #00bb00;
   background-color: #bbffbe;
@@ -397,7 +408,8 @@ background-color: bl;
 
 .password-container i {
   position: absolute;
-  right: 10px; /* Ajuste o valor conforme necessário para o posicionamento correto */
+  right: 10px;
+  /* Ajuste o valor conforme necessário para o posicionamento correto */
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -405,25 +417,28 @@ background-color: bl;
 
 /* Estilize o ícone "olho" de acordo com sua necessidade */
 .fa-eye {
-  color: #333; /* Cor do ícone */
-  font-size: 20px; /* Tamanho do ícone */
+  color: #333;
+  /* Cor do ícone */
+  font-size: 20px;
+  /* Tamanho do ícone */
 }
 
 .container_principal {
-  display: flex; /* Usar flexbox para posicionar os elementos lado a lado */
-  align-items: center; /* Alinhar verticalmente os elementos */
+  display: flex;
+  /* Usar flexbox para posicionar os elementos lado a lado */
+  align-items: center;
+  /* Alinhar verticalmente os elementos */
   margin-top: 50px;
+  margin-bottom: 5%;
 }
 
-.ft {
-  float: left; /* Flutuar a imagem para a esquerda */
-
-}
 
 .txt {
-  overflow: hidden; /* Limpar as flutuações e garantir que o texto não se sobreponha à imagem */
+  overflow: hidden;
+  /* Limpar as flutuações e garantir que o texto não se sobreponha à imagem */
 }
-.btn_cadastrar{
+
+.btn_cadastrar {
   text-align: center;
   text-transform: uppercase;
   border: none;
@@ -437,7 +452,7 @@ background-color: bl;
   width: 100%;
 }
 
-.btn_entrar{
+.btn_entrar {
   text-align: center;
   text-transform: uppercase;
   border: none;
@@ -450,10 +465,26 @@ background-color: bl;
   font-weight: bold;
   width: 100%;
 }
-.lugares{
-  display: block; /* Certifique-se de que a imagem seja exibida como um bloco */
-  margin-left: auto; /* Define a margem esquerda como "auto" */
-  margin-right: auto; /* Define a margem direita como "auto" */
-width: 100%;
-margin-bottom: 50px;
+
+.lugares {
+  display: block;
+  /* Certifique-se de que a imagem seja exibida como um bloco */
+  margin-left: auto;
+  /* Define a margem esquerda como "auto" */
+  margin-right: auto;
+  /* Define a margem direita como "auto" */
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.container_cards {
+  padding: 50px;
+  margin-left: 10%;
+}
+
+.card {
+  border-radius: 50%;
+}
+.card {
+  border-radius: 15px; /* Você pode ajustar esse valor conforme necessário */
 }

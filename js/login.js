@@ -45,8 +45,17 @@ function entrar() {
 
   if (usuario.value === userValid.user && senha.value === userValid.senha) {
     window.open("https://projetotelecall.rianefm.repl.co/html/cpaas.html", "_blank");
+    
     let token = Math.random().toString(16).substr(2);
     localStorage.setItem('token', token);
+    localStorage.setItem('userLogado', JSON.stringify(userValid))
+
+    // Limpar valores dos campos ao entrar na outra página
+    usuario.value = "";
+    senha.value = "";
+    mensagem.innerHTML = "";
+
+
   } else {
     mensagem.innerHTML = "Usuário ou senha incorretos";
     usuario.focus();

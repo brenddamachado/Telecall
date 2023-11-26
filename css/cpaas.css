@@ -1,25 +1,47 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-header {
-  min-height: 150px;
-  padding-top: 40px;
-  width: 100%;
-  text-align:center;
+#header_cpaas {
+  padding: 10px;
   background-color: #20add8;
-} 
+  width: 100%;
+}
+
+nav {
+  display: flex !important;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+
+}
+
+#logado {
+  font-size: 16px;
+  margin-left: 15px;
+
+}
 
 
+/*
 .Titulo {
-  width: 10px; /* Largura desejada */
-  height: 10px; /* Altura desejada */
+  width: 10px;
+  height: 10px;
   margin: 15px;
   font-size: 44px;
   color: #87CEEB; 
 }
+ /* Largura desejada */
+/* Altura desejada */
 
 
 nav {
@@ -29,6 +51,7 @@ nav {
   justify-content: space-between;
 
 }
+
 /* Estilos para o login e cadastro no HEADER*/
 .login-cadastro-container {
   margin-right: 30px;
@@ -54,155 +77,555 @@ nav {
 }
 
 
-.container{
+.container {
   background-color: white;
 }
 
 
-
 #titulos_cpaas {
-  color: #87CEEB;
+  color: #20add8;
+  margin-left: 2%;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  margin-top: 1%;
-  margin-left: 2%;
+  margin-top: 5%;
   font-size: 30px;
 }
 
+#titulos_cpaas h3 {
+  color: #757575;
+}
 
 
-#paragrafos_cpaas {
+.paragrafos_cpaas {
   color: #757575;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  font-size: 25px;
+  font-size: 20px;
   margin: 15px;
   margin-left: 2%;
+  margin-top: 3%;
+
+}
+
+.paragrafo_cpaas h5 {
   margin-top: 5%;
 }
 
-.imagens {
+
+#paragrafodiferente_cpaas {
+
+  color: #20add8;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  width: auto;
-  height: auto;
-
+  font-size: 23px;
+  margin: 15px;
+  margin-left: 2%;
+  margin-top: 5%;
+  position: relative
 }
 
-
-
-body{
-  background-color:  #FAFAFA;
-  
-}
-
-hr{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0,0,0,.1);
-}
-
-
-/*slides*/
-
-.slider{
-  margin: 0 auto;
-  width: 701px;
-  height: 1280px;
-  overflow: hidden;
-}
-
-.slides{
-  width: 400%;
-  height: 1280px;
-  display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-
-.slide{
-  width: 25%;
+#paragrafodiferente_cpaas p {
+  margin: 0;
   position: relative;
+  text-align: center;
+
 }
 
-.slide img{
-  width: 300px; 
-}
 
-.manual-navigation{
-  position: absolute;
-  width: 300px;
-  margin-top: -40px;
+#container {
   display: flex;
   justify-content: center;
 }
 
-.manual-btn{
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.manual-btn:not(:last-child){
-  margin-right: 40px;
-}
-
-.manual-btn:hover{
-  background: black;
-}
-
-#radio1:checked ~ .first{
-  margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-  margin-left: -25%;
-}
-
-#radio3:checked ~ .first{
-  margin-left: -50%;
-}
-
-#radio4:checked ~ .first{
-  margin-left: -75%;
-}
-
-.navigation-auto div{
-  border: 2px solid black;
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.navigation-auto{
-  position: absolute;
-  width: 300px;
-  margin-top: 460px;
+#parte_cpaas {
   display: flex;
+  align-items: center;
+  /* Isso alinha os itens verticalmente no centro */
+}
+
+#titulos_cpaas h5 {
+  margin-right: 10px;
+  /* Adapte conforme necessário para o espaçamento entre os títulos e os parágrafos */
+  margin: 0;
+  padding-top: 17%;
+}
+
+.paragrafo_cpaas {
+  color: #757575;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 20px;
+  margin: 15px;
+  margin-left: 2%;
+  margin-top: 8%;
+  gap: 10%;
+}
+
+
+
+
+
+
+/*parte separada os serviços da cpaas*/
+.cards_servicos {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  /* Ajuste a largura conforme necessário */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  /* Adicionado para centralizar o texto */
+  margin-top: 6%;
 }
 
-.navigation-auto div:not(:last-child){
-  margin-right: 40px;
+.animated {
+  transform: translateY(0);
+  opacity: 1;
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1{
-  background: black;
+.cards_servicos:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  /* Garante que o card em foco apareça acima dos outros */
 }
-#radio2:checked ~ .navigation-auto .auto-btn2{
-  background: black;
+
+#servicos:hover .cards_servicos:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.7;
+  z-index: 0;
 }
-    
-#radio3:checked ~ .navigation-auto .auto-btn3{
-  background: black;
+
+#servicos_1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+#servicos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon_servicos i {
+  font-size: 250%;
+  margin-bottom: 20px;
+  /* Ajustado o espaçamento inferior */
+}
+
+.titulo_servicos {
+  margin-top: 10px;
+  /* Ajustado o espaçamento superior */
+  margin-bottom: 10px;
+  /* Ajustado o espaçamento inferior */
+  color: #20add8;
+}
+
+.texto_servicos {
+  color: #757575;
+  margin-bottom: 20px;
+  /* Ajustado o espaçamento inferior */
+}
+
+/*termina a parte separada os serviços da cpaas*/
+
+
+#titulos_cpaas {
+  margin-right: 20px;
+  /* Adapte conforme necessário para a separação entre as divs */
+}
+
+#cpaas_img1 {
+  margin-left: 50%; 
+  width: 80%;
+  margin-bottom: 20%;
+}
+
+#imagem {
+
+  height: auto;
+  float: right;
+  margin-top: -10%;
+  margin-right: 200px;
+}
+
+
+body {
+  background-color: #FAFAFA;
+
+}
+
+
+
+/* apaguei o css daquele carrosseul que não deu certo e tiramos */
+
+
+
+
+
+/*mascara numero*/
+
+.titulo_mascara {
+  color: #20add8;
+  margin-left: 2%;
+  margin-top: 7%;
+}
+
+
+
+#mascaranumero {
+  width: 30%;
+  margin-top: 10%;
+}
+
+
+.container-masc {
+  display: flex;
+  align-items: center;
+}
+
+.container-cpaas {
+  display: flex;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  margin-top: 8%;
+}
+
+.card1_3 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 9px;
+  text-align: center;
+  width: 200px;
+  /* Ajuste o tamanho conforme necessário */
+}
+
+.card1_3 img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  /* Centraliza verticalmente */
+}
+
+#card_comofunciona {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  margin-top: 8%;
+}
+
+.card_como {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  width: 200px;
+  /* Ajuste o tamanho conforme necessário */
+  transition: box-shadow 0.3s;
+  /* Adiciona uma transição suave ao efeito */
+}
+
+.card_como:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Adiciona um sombreamento ao passar o mouse */
+}
+
+.card_como h4 {
+  margin-top: 20%;
+  margin-bottom: 30%;
+}
+
+.card_como i {
+  font-size: 200%;
+  margin-top: 20%;
+}
+
+.card_como {
+  transition: all .5s;
+}
+
+.card_como:hover {
+  border: 10px solid #0c75ae;
+  border-radius: 10%;
+}
+
+.nome_hr {
+  margin-top: 5%;
+}
+
+.segundapart {
+  margin-top: 5%;
+}
+
+#restante {
+  color: #0c75ae;
+  margin: 3%;
+}
+
+#restante_p {
+  margin: 2%;
+}
+
+/*google*/
+#google {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#google img {
+  width: 90%;
+  /* ajuste conforme necessário */
+}
+
+#carde_google {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card_google {
+  transition: transform 0.3s ease-in-out;
+  /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+.card_google:hover {
+  transform: scale(1.1);
+  /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+.card_google img {
+  width: 300px;
+  /* Ajuste a largura conforme necessário */
+  height: auto;
+  /* Mantém a proporção da imagem */
+}
+
+.img_uso {
+  float: right;
+  width: 50%;
+  /* Defina a largura da imagem aqui */
+}
+
+#img_uso {
+
+  width: 100%;
+  /* Isso garante que a imagem se ajuste ao contêiner da imagem */
+  height: auto;
+}
+
+#sms_imagem {
+  height: 100%;
+  float: right;
+  margin-top: -15%;
+  margin-left: 525px;
+
+}
+
+.texto_sms {
+  margin-top: -25%;
+  margin-left: 700px;
+}
+
+.sms_mao {
+  height: 100%;
+  margin-top: 7%;
+}
+
+
+
+
+.section-style {
+  width: 866px;
+  display: grid;
+  grid-template-rows: repeat(2, 100px);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.section-style div {
+  background-color: #0c75ae;
+  padding: 20px;
+  /* Ajuste conforme necessário para espaçamento interno */
+  text-align: center;
+  color: #fff;
+  /* Cor do texto */
+  font-size: 16px;
+  /* Tamanho da fonte */
+  border-radius: 10px;
+  /* Arredondamento das bordas */
+  animation: rotate 7s infinite;
+  /* Ajusta a duração total da animação */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
   }
 
-#radio:checked ~ .navigation-auto .auto-btn4{
-background: black;
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.paragrafos_cpaas ul,
+li {
+  margin-bottom: 24px;
+}
+
+
+.img_ultima {
+  float: right;
+  margin-top: -20%;
+  margin-left: 300px;
+
+}
+
+#modousos {
+  margin-top: 5%;
+}
+
+#beneficios {
+  margin-top: 15%;
+}
+
+
+#footer_footer {
+  background-color: #20add8;
+  text-align: center;
+  /* Alinhamento do texto */
+  padding: 15px;
+  /* Espaçamento interno */
+  margin-top: 10%;
+}
+
+#footer_tudo {
+  max-width: 1200px;
+  /* Largura máxima do conteúdo dentro do footer */
+  margin: 0 auto;
+  /* Centralizar o conteúdo */
+}
+
+/* Estilizando o texto dentro do footer */
+#footer_tudo p {
+  font-size: 18px;
+  /* Tamanho da fonte */
+}
+
+/* Adicionando um pouco de espaço entre o texto e as bordas do footer */
+#footer_tudo p {
+  margin: 10px 0;
+}
+
+.card_2f {
+  display: flex;
+  justify-content: space-between;
+  /* Distribuir espaço igual entre os cards */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilizando os cards */
+.card1 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  margin: 0 10px;
+  /* Espaçamento entre os cards */
+}
+
+/* Estilizando as imagens dentro dos cards */
+.card1 img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilizando a seta entre os cards */
+.seta_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #757575;
+}
+
+/* Estilizando a seta específica */
+.seta_icon i {
+  width: 30px;
+  height: 30px;
+}
+
+.card1 p {
+  margin-top: 10%;
+}
+
+.card_gooogle {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  margin-top: 1%;
+}
+
+.card3 {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 9px;
+  text-align: center;
+  width: 200px;
+  /* Ajuste o tamanho conforme necessário */
+}
+
+.card3 img {
+  max-width: 70%;
+  height: auto;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.card3 {
+  transition: transform 0.3s ease-in-out;
+  /* Adiciona uma transição suave de 0.3 segundos */
+}
+
+.card3:hover {
+  transform: scale(1.1);
+  /* Aumenta o tamanho da imagem ao passar o mouse */
+}
+
+.seta_subir {
+  position: fixed;
+  bottom: 20px;
+  /* Ajuste a distância do fundo conforme necessário */
+  right: 20px;
+  /* Ajuste a distância da borda direita conforme necessário */
+  cursor: pointer;
+}
+
+.seta_subir i {
+  font-size: 25px;
+
 }

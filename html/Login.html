@@ -60,22 +60,18 @@
   </div>
   <div id="login-container">
     <form class="form_login">
-
-
-      <label class="label_login" id="labelLogin" for="login" class="form">Login:</label>
-      <input autofocus class="input_login" type='text' id='login' name='login' placeholder="Digite um login"
-        maxlength="6">
-
-      <label class="label_login" id="labelSenha" for="senha" class="form"> Senha:</label>
+      <label class="label_login form" id="labelLogin" for="login">Login:</label>
+      <input autofocus class="input_login" type='text' id='login' name='login' placeholder="Digite um login" maxlength="6">
+    
+      <label class="label_login form" id="labelSenha" for="senha">Senha:</label>
       <div class="password-container">
-        <input class="input_login" type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="8"
-          autocomplete="new-password">
+        <input class="input_login" type="password" id="senha" name="senha" placeholder="Digite sua senha" maxlength="8" autocomplete="new-password">
         <i id="verSenha" class="fa-regular fa-eye"></i>
       </div>
-
+    
       <div id="mensagem"></div>
-
     </form>
+    
     <button onclick="entrar ()" class="btn_entrar" type="submit"> Entrar</button>
 
     <div id="register-container">

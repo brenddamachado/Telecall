@@ -290,13 +290,15 @@ function cadastrar() {
     emailInput.value = '';
     senha.value = '';
     senha2.value = '';  
-    cepInput.value = '';
-    n.valeu = '';
+    cepInput.val('');  // Limpar o campo do CEP usando jQuery
+    n.value = '';
     celular.value = '';
     telefone.value = '';
     cpf.value = '';
     mae.value = '';
     nasc.value = '';
+   
+    
 
     // Abrir a página após o cadastro
     setTimeout(() => {

@@ -287,6 +287,8 @@ body {
   align-items: center;
 }
 
+
+
 .container-cpaas {
   display: flex;
 }
@@ -429,8 +431,8 @@ body {
 #sms_imagem {
   height: 100%;
   float: right;
-  margin-top: -15%;
-  margin-left: 525px;
+  margin-top: -25%;
+
 
 }
 

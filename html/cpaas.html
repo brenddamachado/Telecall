@@ -27,6 +27,8 @@
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
   <!-- boot js-->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
   <link rel="stylesheet" href="../css/dark.css">
   <link rel="stylesheet" href="../css/acessibilidade.css">
@@ -56,45 +58,44 @@
       </div>
     </nav>
   </header>
-  <div class="font-menu">
-    <button id="font-toggle"><i id="icon_ac" class="fa-solid fa-caret-down"></i></button>
-    <div class="font-options">
-      <button id="increase-font">Aumentar</button>
-      <button id="decrease-font">Diminuir</button>
-      <button id="reset-font">Restaurar</button>
-    </div>
+
+
+
+  <div class="seta_subir" onclick="scrollToServicos()">
+    <i class="fa-solid fa-arrow-up" style="color: #20add8;"></i>
   </div>
-  <br>
+
+
   <div id="titulos_cpaas">
     <h1 class="titulo_cpaas">CPaas: O que é ?</h1>
 
     <h3>Communications Platform as a Service</h3>
     <h4>Plataforma de Comunicação como Serviço</h4>
     <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
   </div>
 
-
-  <div class="paragrafos_cpaas">
-    <p>É uma solução de software de comunicação que atua</p>
-    <p>como uma base sobre a qual desenvolvedores podem</p>
-    <p>integrar uma variedade de aplicativos.</p>
-    <br>
-    <p>Métodos de comunicação típicos, como voz, chamadas</p>
-    <p>de vídeo ou mensagens de texto SMS, podem ser</p>
-    <p>incorporados em outros sistemas por meio de APIs que</p>
-    <p>se conectam à plataforma CPaaS.</p>
-    <br>
-    <p>Essas APIs permitem que as empresas expandam suas</p>
-    <p>ofertas sem a necessidade de hardware ou software</p>
-    <p>adicional.</p>
-  </div>
-
-
-  <div class="imagens">
-    <div>
-      <img src="../imgs/cpaas_imagem1.png" width="500">
+  <div class="container-cpaas">
+    <div class="paragrafos_cpaas">
+      <p>É uma solução de software de comunicação que atua</p>
+      <p>como uma base sobre a qual desenvolvedores podem</p>
+      <p>integrar uma variedade de aplicativos.</p>
+      <br>
+      <p>Métodos de comunicação típicos, como voz, chamadas</p>
+      <p>de vídeo ou mensagens de texto SMS, podem ser</p>
+      <p>incorporados em outros sistemas por meio de APIs que</p>
+      <p>se conectam à plataforma CPaaS.</p>
+      <br>
+      <p>Essas APIs permitem que as empresas expandam suas</p>
+      <p>ofertas sem a necessidade de hardware ou software</p>
+      <p>adicional.</p>
+    </div>
+    <div class="img_cpaas">
+      <img src="../imgs/cpaas_imagem1.png" id="cpaas_img1">
     </div>
   </div>
+
+
   <!--
   <br>
   <br>
@@ -117,32 +118,42 @@
   <br>
   <br>
 -->
+  <div class="container_transformacao">
+    <div id="titulos_cpaas">
+      <p>
+        CPaaS e a Transformação Digital
+      </p>
+    </div>
 
-  <div id="titulos_cpaas">
-    CPaaS e a Transformação Digital
+    <div class="paragrafos_cpaas">
+      <p>
+        Expectativa de crescimento estimado de
+        $ 8,2 bilhões em 2021
+      </p>
+
+      <p>
+        85% dos profissionais se conectam de
+        maneira diferente com colegas e clientes do que
+        faziam há apenas 5 anos.
+      </p>
+
+      <p>
+        As receitas de CPaaS estão crescendo mais de
+        40% ao ano
+      </p>
+
+      <p>
+        CPaaS já ultrapassou o mercado de UCaaS
+        (Unified Communication as a Service).
+      </p>
+
+      <p>
+        Marcas que estão em múltiplos canais
+        melhoram a experiência do usuário e aumentam
+        seus resultados.
+      </p>
+    </div>
   </div>
-
-  <div class="paragrafos_cpaas">
-    <p>Expectativa de crescimento estimado de
-      $ 8,2 bilhões em 2021</p>
-
-    <p>85% dos profissionais se conectam de
-      maneira diferente com colegas e clientes do que
-      faziam há apenas 5 anos.
-    </p>
-
-    <p>As receitas de CPaaS estão crescendo mais de
-      40% ao ano</p>
-
-    <p>CPaaS já ultrapassou o mercado de UCaaS
-      (Unified Communication as a Service).
-    </p>
-
-    <p>Marcas que estão em múltiplos canais
-      melhoram a experiência do usuário e aumentam
-      seus resultados.</p>
-  </div>
-
 
   <div id="titulos_cpaas">
     Usos
@@ -151,23 +162,90 @@
 
 
   <div id="servicos">
-    <img src="../imgs/logi.png" alt="Descrição da imagem 1" width="360">
-    <img src="../imgs/varejo.png" alt="Descrição da imagem 2" width="360">
-    <img src="../imgs/call_center.png" width="360">
-    <img src="../imgs/saude.png" width="360">
+    <div class="cards_servicos animated">
+      <div class="icon_servicos">
+        <i class="fa-solid fa-box" style="color: #20add8;"></i>
+      </div>
+      <div class="titulo_servicos">
+        <h2>Logística</h2>
+      </div>
+      <div class="texto_servicos">
+        <p>Acesso seguro com 2FA.
+          Uso de números mascarados
+          para proteção de funcionário
+          e cliente.
+          Mantenha o cliente
+          informado sobre entrega e
+          serviços.
+          Verified calling para
+          confirmação de entregas.</p>
+      </div>
+    </div>
+
+    <div class="cards_servicos animated">
+      <div class="icon_servicos">
+        <i class="fa-solid fa-cart-arrow-down" style="color: #20add8;"></i>
+      </div>
+      <div class="titulo_servicos">
+        <h2> Varejo</h2>
+      </div>
+      <div class="texto_servicos">
+        <p>Compra segura com 2FA. <br>
+          Avisos sobre compras e
+          entregas. <br>
+          Upsell com novas ofertas e
+          vantagens via SMS ou
+          Verified Calling.</p>
+      </div>
+    </div>
+
+    <div class="cards_servicos animated">
+      <div class="icon_servicos">
+        <i class="fa-solid fa-phone" style="color: #20add8;"></i>
+      </div>
+      <div class="titulo_servicos">
+        <h2>Call Center</h2>
+      </div>
+      <div class="texto_servicos">
+        <p>Melhore taxas de abertura
+          utilizando alertas SMS para
+          confirmações.
+          Economia de números com o
+          uso de um único número
+          máscara por todos os agentes.
+          Verified Calling para
+          confirmação de
+          agendamentos.</p>
+      </div>
+    </div>
+
+    <div class="cards_servicos animated">
+      <div class="icon_servicos">
+        <i class="fas fa-heartbeat" style="color: #20add8;"></i>
+      </div>
+      <div class="titulo_servicos">
+        <h2>Saúde</h2>
+      </div>
+      <div class="texto_servicos">
+        <p>Acesso seguro com 2FA.
+          Melhore o agendamento e
+          reduza faltas com lembretes por
+          SMS. <br>
+          Tokens de autorização para procedimentos com 2FA. <br>
+          Verified Calling para avisos de resultados e agendamentos.</p>
+      </div>
+    </div>
   </div>
-
-
-
 
   <div id="titulos_cpaas">
     Vantagens Telecall
   </div>
   <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
   <br>
 
   <div id="container">
-    <!-- transforma em cards interativos -->
+    <!-- atualização: não precisa mais transformar em cards -->
     <div id="parte_cpaas">
 
       <div id="titulos_cpaas">
@@ -180,43 +258,37 @@
         <h5>Suporte ao Cliente</h5>
 
         <h5>Preço</h5>
-        <br>
-        <br>
+
       </div>
 
-      <div class="paragrafos_cpaas">
+      <div class="paragrafo_cpaas">
         <h5>Empresa que já conhecem e confiam;</h5>
-        <br>
 
         <h5>Aplicativos de rápida implementação</h5>
-        <br>
+
 
 
         <h5>Rede própria de alta capacidade e controle total de ponta-a-ponta;</h5>
-        <br>
 
         <h5>Representantes locais de vendas e suporte;</h5>
-        <br>
 
         <h5>Melhor custo benefício para um conjunto completo de recursos e serviços;</h5>
-        <br>
-        <br>
+
       </div>
-      <br>
-      <br>
+
 
     </div>
 
   </div>
-  <!-- aqui termina os cards que devo criar, estou achando a página muito estática-->
+
   <div id="titulos_cpaas">
     Soluções
   </div>
   <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
   <br>
-
-  <div id="servicos">
-
+  <a name="servicos"></a>
+  <div id="servicos_1">
     <a href="#container_2fa">
       <img src="../imgs/2FA.png" alt="2FA" width="300">
     </a>
@@ -229,10 +301,12 @@
       <img src="../imgs/Google.png" alt="Google Verified Calls" width="300">
     </a>
 
-    <a href="caminho/do/seu/link">
+    <a href="#distancia">
       <img src="../imgs/SMS.png" alt="SMS Programável" width="300">
     </a>
   </div>
+
+
 
   <div id="container_2fa">
 
@@ -241,6 +315,7 @@
     </div>
 
     <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
     <br>
     <div id="titulos_cpaas">
       <h3>Two-Factor Authentication</h3>
@@ -248,14 +323,14 @@
     </div>
 
 
-    <p class="paragrafos_cpaas"> O 2FA é um procedimento de segurança que garante que serão
-      necessários 2 fatores únicos para liberação de uma ação.<br> O
-      primeiro fator é a senha que o usuário e o segundo pode ser
+    <p class="paragrafos_cpaas"> O 2FA é um procedimento de segurança que garante que serão<br>
+      necessários 2 fatores únicos para liberação de uma ação.<br>O
+      primeiro fator é a senha que o usuário e o segundo<br>pode ser
       autenticado via token, via detecção de impressão digital,<br>
       reconhecimento facial, código enviado via sms, entre outros.</p>
 
     <div id="imagem">
-      <img src="../imgs/autenticacao.svg" alt="2FA" width="300">
+      <img src="../imgs/autenticacao.svg" alt="2FA" width="411">
     </div>
     <div class="paragrafos_cpaas">
       O 2FA permite que você:
@@ -265,258 +340,406 @@
       • Adicione uma camada extra de segurança além da senha pessoal.<br>
       • Ofereça maior segurança para usuários.
     </div>
-    <br>
-    <br>
-    <div id="titulos_cpaas">
-      Fortaleça a estratégia de segurança de seu negócio.
+
+
+    <h3 id="paragrafodiferente_cpaas">Fortaleça a estratégia de segurança de seu negócio.</h3>
+
+
+    <div id="paragrafodiferente_cpaas">
+      <p>Adicionar um número de telefone de recuperação a uma
+        conta individual pode bloquear até:<br>
+
+        100% dos bots automatizados,<br>
+
+        99% dos ataques de phishing em massa,<br>
+
+        e 66% dos ataques direcionados.</p>
     </div>
 
+
+    <div class="nome_hr">
+      <h2 class="titulo_mascara">Como funciona?</h2>
+      <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+    </div>
+    <!-- vou deixar essa parte de outro jeito -->
+    <div class="card_2f">
+      <div class="card1">
+        <img src="../imgs/login_2f.png" alt="computador com login e senha em sua tela">
+        <p>Usuário acessa seu site o
+          aplicativo e digita a senha
+          cadastrada para entrar em
+          seu perfil ou completar uma
+          transação.
+        </p>
+      </div>
+      <div class="seta_icon">
+        <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+      </div>
+      <div class="card1">
+
+        <img src="../imgs/negado_2f.png" alt="Imagem 2">
+        <p>A Telecall recebe a tentativa
+          de login e solicita que o
+          usuário insira seu número de
+          telefone para autorizar o
+          acesso.</p>
+      </div>
+      <div class="seta_icon">
+        <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+      </div>
+      <div class="card1">
+
+        <img src="../imgs/cel_2f.png" alt="celular com número pin" style="max-width: 45%; height: auto;">
+        <p>Após inserir seu número, a
+          Telecall envia para o usuário
+          por SMS, chamada ou e-mail
+          um código PIN de uso único.
+          Esse código PIN é também
+          conhecido como OTP (One
+          Time Password).</p>
+      </div>
+      <div class="seta_icon">
+        <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+      </div>
+      <div class="card1">
+
+        <img src="../imgs/loginp_2f.png" alt="computador  com código">
+        <p>O usuário insere o código no
+          site ou aplicativo para
+          concluir o processo de
+          verificação.</p>
+      </div>
+    </div>
+
+
+    <div class="nome_hr">
+      <h2 class="titulo_mascara">Benefícios</h2>
+      <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+    </div>
     <div class="paragrafos_cpaas">
-      Adicionar um número de telefone de recuperação a uma
-      conta individual pode bloquear até:
+      • Ofereça segurança aprimorada para seus clientes.<br>
+
+      • API simples e de rápida implementação.<br>
+      • Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail.<br>
+      • Flexibilidade de canais garante que o usuário conseguirá completar a tarefa desejada
+      mesmo quando tiver problema com um deles.Exemplo: Enviar OTP por SMS, em caso de
+      falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.<br>
+      • Reduza casos de fraude e invasões e evite o acesso a dados por invasores.<br>
+
+      • Plataforma intuitiva que permite visualizar relatórios de uso por dia, mês ou ano e pesquisar usando diversos
+      critérios de filtro.<br>
     </div>
-    <div class="paragrafos_cpaas">
-      100% dos bots automatizados,<br>
-
-      99% dos ataques de phishing em massa,<br>
-
-      e 66% dos ataques direcionados.
-    </div>
-
-    <div id="titulos_cpaas">
-      Como funciona?
-    </div>
-    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
-
-    <!-- vou tiar
-      <div id="card-area">
-        <div class="wrapper">
-          <div class="box-area">
-            <div class="box">
-              <img src="../imgs/cpaascard1.png" alt="computador com login e senha em sua tela" width="200">
-              <div class="overlay">
-                <p>Usuário acessa seu site o
-                  aplicativo e digita a senha
-                  cadastrada para entrar em
-                  seu perfil ou completar uma
-                  transação.</p>
-              </div>
-              <div class="box">
-                <img src="../imgs/cpaascard2.png" alt="sinal de alerta" width="200">
-                <div class="overlay">
-                  <p>A Telecall recebe a tentativa
-                    de login e solicita que o
-                    usuário insira seu número de
-                    telefone para autorizar o
-                    acesso.</p>
-                </div>
-              </div>
-              <div class="box">
-                <img src="../imgs/cpaascard3.png" alt="celular com número pin" width="200">
-                <div class="overlay">
-                  <p>Após inserir seu número, a
-                    Telecall envia para o usuário
-                    por SMS, chamada ou e-mail
-                    um código PIN de uso único.
-                    Esse código PIN é também
-                    conhecido como OTP (One
-                    Time Password).</p>
-                </div>
-              </div>
-              <div class="box">
-                <img src="../imgs/cpaascard4.png" alt="computador  com código" width="200">
-                <div class="overlay">
-                  <p>O usuário insere o código no
-                    site ou aplicativo para
-                    concluir o processo de
-                    verificação.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <br>
-
-      <div id="titulos_cpaas">
-        Beneficios
-      </div>
-
-      <div class="paragrafos_cpaas">
-        • Ofereça segurança aprimorada para seus clientes.<br>
-
-        • API simples e de rápida implementação.<br>
-        • Envio de OTP por meio de vários canais, incluindo SMS, voz ou e-mail.<br>
-        • Flexibilidade de canais garante que o usuário conseguirá completar a tarefa desejada
-        mesmo quando tiver problema com um deles.Exemplo: Enviar OTP por SMS, em caso de
-        falha, enviar OTP por chamada de voz, em caso de outra falha, enviar por e-mail.<br>
-        • Reduza casos de fraude e invasões e evite o acesso a dados por invasores.<br>
-
-        • Plataforma intuitiva que permite visualizar relatórios de uso por dia, mês ou ano e pesquisar usando diversos
-        critérios de filtro.<br>
-      </div>
 
   </div>
 
+  <div class="distancia">
+    <!-- NÚMERO MÁSCARA -->
+    <div id="numero_mascara">
+      <div class="container-masc">
+        <div class="primeirapart">
+          <h2 class="titulo_mascara">NÚMERO MÁSCARA</h2>
+          <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
 
-  <!-- NÚMERO MÁSCARA -->
-  <div id="numero_mascara">
-    <div class="container-masc">
-      <div class="primeirapart">
-        <h2 class="titulo_mascara">NÚMERO MÁSCARA</h2>
-        <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
-        <div class="segundapart">
-          <p class="paragrafos_cpaas">Proteja identidades profissionais.</p>
-          <p class="paragrafos_cpaas">Garanta aos seus clientes a capacidade de fazer chamadas e enviar mensagens sem
-            expor seus números de
-            telefones
-            pessoais.</p>
+          <div class="segundapart">
+            <p class="paragrafos_cpaas">Proteja identidades profissionais.</p>
+            <p class="paragrafos_cpaas">Garanta aos seus clientes a capacidade de fazer chamadas e enviar mensagens sem
+              expor seus números de
+              telefones
+              pessoais.</p>
 
-          <div class="paragrafos_cpaas">
-            • Mascare um número de telefone para interações com mais
-            privacidade.<br>
-            • Permite que empresas façam negócios usando menos
-            números de telefone.<br>
-            • Oferece uma experiência mais segura e profissional.
+            <div class="paragrafos_cpaas">
+              • Mascare um número de telefone para interações com mais
+              privacidade.<br>
+              • Permite que empresas façam negócios usando menos
+              números de telefone.<br>
+              • Oferece uma experiência mais segura e profissional.
+            </div>
           </div>
         </div>
+        <img id="mascaranumero" src='../imgs/numero-mascara.png'>
       </div>
-      <img id="mascaranumero" src='../imgs/numero-mascara.png'>
+      <div>
+        <div class="nome_hr">
+          <h2 class="titulo_mascara"> Como Funciona?</h2>
+          <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+        </div>
+        <div class="card-container">
+          <div class="card1_3">
+            <p>Usuário faz uma chamada através de um aplicativo.</p>
+            <img src="../imgs/mascaranum_icon.png" alt="Imagem 1">
+            <p>Ex: usuário liga para o entregador ou motorista de táxi ou entra em contato com a central de atendimento.
+            </p>
+          </div>
+          <div class="arrow-icon">
+            <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+          </div>
+          <div class="card1_3">
+            <p>Plataforma
+              mascara o número
+              original.</p>
+            <img src="../imgs/mascaranum_icon2.png" alt="Imagem 2">
+            <p>A plataforma recebe a
+              chamada e mascara o
+              número antes de conectar
+              com o destinatário.</p>
+          </div>
+          <div class="arrow-icon">
+            <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+          </div>
+          <div class="card1_3">
+            <p>Ambas as partes
+              são conectadas.</p>
+            <img src="../imgs/mascaranum_icon3.png" alt="Imagem 3">
+            <p>A plataforma conecta ambas
+              as partes mantendo a
+              privacidade dos dois.</p>
+          </div>
+        </div>
+        <div class="nome_hr">
+          <h2 class="titulo_mascara">Quem usa?</h2>
+          <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+        </div>
+
+        <div id="card_comofunciona">
+          <div class="card_como">
+            <i class="fa-solid fa-car" style="color: #757575;"></i>
+            <h4>Apps de Transporte</h4>
+            <p>Permite que motorista e
+              passageiro se comuniquem
+              sem compartilhar seus
+              números pessoais.</p>
+          </div>
+          <div class="card_como">
+            <i class="fa-solid fa-mobile-screen-button" style="color: #757575;"></i>
+            <h4>Apps de
+              Relacionamento</h4>
+            <p>Permite uma maneira
+              privada e segura para
+              usuários interagirem sem
+              expor contatos pessoais.</p>
+          </div>
+          <div class="card_como">
+            <i class="fa-solid fa-cart-shopping" style="color: #757575;"></i>
+            <h4>E-Commerce</h4>
+            <p>Permite que clientes
+              entrem em contato através
+              do aplicativo. Podem
+              também integrar chamadas
+              internacionais.</p>
+          </div>
+          <div class="card_como">
+            <i class="fa-solid fa-truck-fast" style="color: #757575;"></i>
+            <h4>Entregas
+              & Logística
+            </h4>
+            <P>
+              Mantenha seu cliente
+              informado sobre
+              entregas e serviços, tire
+              dúvidas, etc
+            </P>
+          </div>
+
+        </div>
+        <h3 id="restante">43% das empresas brasileiras adotou o Home
+          Office como padrão. Mesmo após o fim da pandemia, estatísticas
+          indicam que o modelo de trabalho Home
+          Office deve crescer cerca de 30%.
+        </h3>
+        <p class="paragrafos_cpaas">Funcionários que não possuem celular empresarial ou ramal
+          virtual podem se beneficiar do uso de um número máscara
+          permanente do trabalho vinculado ao seu telefone celular,
+          assim protegendo seus número pessoais.
+        </p>
+
+
+      </div>
+      <!-- NÚMERO MÁSCARA -->
     </div>
-    <div>
-      <div class="nome_hr">
-        <h2 class="titulo_mascara"> Como Funciona?</h2>
+  </div>
+  <!--GOOGLE VERIFIED CALLS -->
+  <!--criei esse id para chamar naquela foto e ir direto para essa parte, ok?-->
+  <div id="googleVerified">
+    <div class="container-masc">
+      <div class="primeirapart">
+        <h2 class="titulo_mascara">Google Verified Calls</h2>
         <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
-      </div>
-      <div class="card-container">
-        <div class="card1_3">
-          <p>Usuário faz uma chamada através de um aplicativo.</p>
-          <img src="../imgs/mascaranum_icon.png" alt="Imagem 1">
-          <p>Ex: usuário liga para o entregador ou motorista de táxi ou entra em contato com a central de atendimento.
-          </p>
+
+        <div class="segundapart">
+          <p class="paragrafos_cpaas"> Esse novo recurso do Google, exclusivo para
+            telefones Android, permite que empresas exibam
+            para o cliente na hora da chamada
+            sua marca,
+            logotipo e até mesmo o motivo da chamada.</p>
+          <p class="paragrafos_cpaas"> A Telecall é a primeira operadora de telecom no
+            Brasil a oferecer esse recurso do Google.</p>
         </div>
-        <div class="arrow-icon">
-          <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
-        </div>
-        <div class="card1_3">
-          <p>Plataforma
-            mascara o número
-            original.</p>
-          <img src="../imgs/mascaranum_icon2.png" alt="Imagem 2">
-          <p>A plataforma recebe a
-            chamada e mascara o
-            número antes de conectar
-            com o destinatário.</p>
-        </div>
-        <div class="arrow-icon">
-          <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
-        </div>
-        <div class="card1_3">
-          <p>Ambas as partes
-            são conectadas.</p>
-          <img src="../imgs/mascaranum_icon3.png" alt="Imagem 3">
-          <p>A plataforma conecta ambas
-            as partes mantendo a
-            privacidade dos dois.</p>
-        </div>
-      </div>
-      <div class="nome_hr">
-        <h2 class="titulo_mascara">Quem usa?</h2>
-        <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
       </div>
 
-      <div id="card_comofunciona">
-        <div class="card_como">
-          <i class="fa-solid fa-car" style="color: #757575;"></i>
-          <h4>Apps de Transporte</h4>
-          <p>Permite que motorista e
-            passageiro se comuniquem
-            sem compartilhar seus
-            números pessoais.</p>
-        </div>
-        <div class="card_como">
-          <i class="fa-solid fa-mobile-screen-button" style="color: #757575;"></i>
-          <h4>Apps de
-            Relacionamento</h4>
-          <p>Permite uma maneira
-            privada e segura para
-            usuários interagirem sem
-            expor contatos pessoais.</p>
-        </div>
-        <div class="card_como">
-          <i class="fa-solid fa-cart-shopping" style="color: #757575;"></i>
-          <h4>E-Commerce</h4>
-          <p>Permite que clientes
-            entrem em contato através
-            do aplicativo. Podem
-            também integrar chamadas
-            internacionais.</p>
-        </div>
-        <div class="card_como">
-          <i class="fa-solid fa-truck-fast" style="color: #757575;"></i>
-          <h4>Entregas
-            & Logística
-          </h4>
-          <P>
-            Mantenha seu cliente
-            informado sobre
-            entregas e serviços, tire
-            dúvidas, etc
-          </P>
-        </div>
+      <img id="mascaranumero" src='../imgs/celular.png'>
+    </div>
+
+
+    <div class="card_gooogle">
+      <div class="card3">
+
+        <img src="../imgs/call_azul_trocado.png" alt="Imagem 1">
+        <p>Uma chamada telefônica
+          de uma empresa assinante
+          é feita para um cliente
+          potencial ou existente.
+        </p>
+      </div>
+      <div class="arrow-icon">
+        <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+      </div>
+      <div class="card3">
+
+        <img src="../imgs/engrenagem_semfundo.png" alt="Imagem 2">
+        <p>Em nanossegundos, a
+          solicitação é encaminhada
+          para a plataforma da Telecall
+          que processa a chamada e
+          adiciona as informações
+          verificadas antes de
+          encaminhá-la ao destinatário.</p>
+      </div>
+      <div class="arrow-icon">
+        <i class="fa-solid fa-arrow-right" style="color: #757575;"></i>
+      </div>
+      <div class="card3">
+
+        <img src="../imgs/cel_azul.png" alt="Imagem 3">
+        <p>As informações aparecem
+          na tela do celular do
+          recipiente que atenderá a
+          ligação com uma chamada
+          de voz normal.</p>
+      </div>
+    </div>
+
+
+    <h2 class="titulo_mascara"> Usos</h2>
+    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+
+    <div id="modousos">
+      <!-- troquei a imagem de lugar porque estava interferindo na imagem do sms -->
+      <div class="img_uso">
+        <img id="img_uso" src="../imgs/img_googleusopng-removebg-preview.png">
 
       </div>
-      <h3 id="restante">43% das empresas brasileiras adotou o Home
-        Office como padrão. Mesmo após o fim da pandemia, estatísticas
-        indicam que o modelo de trabalho Home
-        Office deve crescer cerca de 30%.
-      </h3>
-      <p class="paragrafos_cpaas">Funcionários que não possuem celular empresarial ou ramal
-        virtual podem se beneficiar do uso de um número máscara
-        permanente do trabalho vinculado ao seu telefone celular,
-        assim protegendo seus número pessoais.
+      <p class="paragrafos_cpaas">• Aviso de problemas de fraude de cartão de crédito.</p>
+      <p class="paragrafos_cpaas">• Aviso de atrasos e cancelamentos de voos.</p>
+      <p class="paragrafos_cpaas">• Agendamentos de serviços, entregas, reparos e
+        instalações.</p>
+      <p class="paragrafos_cpaas">• Avisos sobre agendamentos, exames e resultados.</p>
+      <p class="paragrafos_cpaas">• Oferecer uma melhor experiência de vendas e
+        promoções.</p>
+    </div>
+
+  </div>
+  <div id="sms_marke">
+    <div class="container-sms">
+      <div class="primeirapart">
+        <h2 class="titulo_mascara">SMS Marketing</h2>
+        <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+        <div class="segundapart">
+     <p class="paragrafos_cpaas">Conecte-se com seus clientes de forma fácil e rápida através do envio de SMS em
+            massa.</p>
+          <p class="paragrafos_cpaas">Através de nossa plataforma inovadora, qualquer empresa pode estabelecer uma
+            comunicação eficiente<br> com seus clientes e prospects, seja por meio de mensagens de texto ou voz.</p>
+          <p class="paragrafos_cpaas">Com altas taxas de abertura e engajamento, o envio de SMS em massa é altamente
+            eficaz para<br> impulsionar vendas, enviar lembretes e notificações, além de proporcionar uma melhor
+            experiência para o seu cliente.</p>
+        </div>
+      </div>
+
+      <img id="sms_imagem" src='../imgs/celular_sms.png'>
+    </div>
+
+    
+
+
+
+
+
+    <h2 class="titulo_mascara"> Como funciona ?</h2>
+    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+
+    <div class="sms_mao">
+      <img src="../imgs/campanha-sms-em-massa.png" width="300">
+    </div>
+
+    <p class="paragrafos_cpaas">
+    <div class="texto_sms">
+      <p class="paragrafos_cpaas">Configure sua mensagem em minutos! Faça um cadastro, compre créditos e crie
+        sua campanha.</p>
+      <p class="paragrafos_cpaas">Com a nossa solução, a gestão de campanhas de SMS atinge níveis superiores de
+        eficiência com garantia de entrega, segurança e velocidade.</p>
+      <p class="paragrafos_cpaas">Não perca tempo, integre agora nossa API e comece a enviar mensagens de SMS.
       </p>
-
-
     </div>
-    <!-- NÚMERO MÁSCARA -->
 
 
-    <!--GOOGLE VERIFIED CALLS -->
-    <!--criei esse id para chamar naquela foto e ir direto para essa parte, ok?-->
-
-    <div id="googleVerified">
-      <div id="titulos_cpaas">
-        Google Verified Calls
-      </div>
+  <!--criei essa div para o espaçamento entre as coisas, mas qualquer coisa podemos trocar -->
+  <div class="distancia">
+    <div id="beneficios">
+      <h2 class="titulo_mascara"> Benefícios</h2>
       <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
-
-      <p class="paragrafos_cpaas">
-        Esse novo recurso do Google, exclusivo para
-        telefones Android, permite que empresas exibam
-        para o cliente na hora da chamada<br>
-        sua marca,
-        logotipo e até mesmo o motivo da chamada.
-        <br>
-        A Telecall é a primeira operadora de telecom no
-        Brasil a oferecer esse recurso do Google.
-      </p>
-
     </div>
 
 
+    <div class="section-style">
+      <div>Comunicação rápida, eficiente e escalável.</div>
+      <div>Excelente custo-benefício.</div>
+      <div>Altas taxas de abertura e engajamento.</div>
+      <div>Interação bidirecional: possibilidade de receber respostas</div>
+      <div>Plataforma fácil de usar.</div>
+      <div>Acompanhamento de métricas e geração de relatórios.</div>
+      <div>Mensagens personalizadas.</div>
+      <div>Confiabilidade e segurança.</div>
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+  <div>
+    <h2 class="titulo_mascara">Como usar o SMS Marketing no seu negócio?</h2>
+    <hr style="width:50%;text-align:left;margin-left:0; background-color:#87CEEB; border-width:4px">
+    <ul class="paragrafos_cpaas">
+      <li>Divulgue produtos, promoções e ofertas.</li>
+      <li>Compartilhe informações e novidades.</li>
+      <li>Envie cobranças, boletos e lembretes de pagamento.</li>
+      <li>Comunique agendamentos e lembretes.</li>
+      <li>Faça pesquisas de clima e satisfação.</li>
+      <li>Envie vouchers, cupons e códigos de desconto.</li>
+      <li>Envie confirmações de compras, pagamentos e entregas.</li>
+      <li>Envie código de rastreio de compras.</li>
+    </ul>
+  </div>
 
 
+  <div class="img_ultima">
+    <img class="img_ultima" src="../imgs/modavo-sms-marketing-como-usar.png" width="500">
+  </div>
+  <footer id="footer_footer">
+    <div id="footer_tudo">
+      <p>Copyright © 2023 | Cpaas Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 
-
-
-
-
-    <script src="../js/cpaas.js"></script>
-    <script src="../js/dark.js"></script>
-    <script src="../js/acessibilidade.js"> </script>
+  <script src="../js/cpaas.js"></script>
+  <script src="../js/dark.js"></script>
+  <script src="../js/acessibilidade.js"> </script>
+  <script src="../js/seta.js"></script>
 </body>
 
 </html>
